@@ -116,7 +116,7 @@
     if (!hs) return;
     if (!hsOn) { hs.style.height = ''; track.style.transform = ''; return; }
     const extra = track.scrollWidth - innerWidth;
-    hs.style.height = (innerHeight + Math.max(extra, 0)) + 'px';
+    hs.style.height = (innerHeight + Math.max(extra, 0) * 1.25) + 'px';
   };
   addEventListener('resize', sizeHs);
   addEventListener('load', sizeHs);
@@ -151,7 +151,8 @@
     if (hsOn && hs) {
       const r = hs.getBoundingClientRect();
       const total = hs.offsetHeight - vh;
-      const p = Math.min(Math.max(-r.top / total, 0), 1);
+      const raw = Math.min(Math.max(-r.top / total, 0), 1);
+      const p = Math.min(Math.max((raw - 0.1) / 0.8, 0), 1); /* kurze Pause am Anfang und Ende */
       const extra = track.scrollWidth - innerWidth;
       track.style.transform = 'translate3d(' + (-p * extra).toFixed(1) + 'px,0,0)';
       hbar.style.setProperty('--hp', p.toFixed(3));
