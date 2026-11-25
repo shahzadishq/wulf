@@ -5,7 +5,8 @@ Aufruf:  python3 build.py
 Jede Datei in src/ beginnt mit einer Kommentarzeile:
 <!-- title: Seitentitel | description: Meta-Beschreibung | nav: schluessel -->
 """
-import pathlib, re
+import pathlib, re, time
+VERSION = time.strftime("%Y%m%d%H%M")
 
 ROOT = pathlib.Path(__file__).parent
 LIVE = "https://kanzlei-wulf.de/wp-content/uploads"
@@ -42,7 +43,7 @@ HEAD = """<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v={ver}">
   <script>document.documentElement.classList.add('js');try{{var s=localStorage.getItem('wulf-size');if(s)document.documentElement.setAttribute('data-size',s)}}catch(e){{}}</script>
 </head>
 <body>
@@ -125,7 +126,7 @@ FOOT = """  </main>
     <a href="tel:+4939312527222"><span>Stendal</span><strong>Anrufen</strong></a>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=__VER__"></script>
 </body>
 </html>
 """
@@ -141,8 +142,8 @@ def build():
             for key, href, label in NAV
         )
         header_class = "header--over" if meta.get("nav") == "start" else "header--page"
-        page = HEAD.format(title=meta["title"], description=meta["description"], nav=nav, live=LIVE, sprite=SPRITE, header_class=header_class)
-        page += body.replace("{live}", LIVE) + FOOT
+        page = HEAD.format(title=meta["title"], description=meta["description"], nav=nav, live=LIVE, sprite=SPRITE, header_class=header_class, ver=VERSION)
+        page += body.replace("{live}", LIVE) + FOOT.replace("__VER__", VERSION)
         (ROOT / src.name).write_text(page, encoding="utf-8")
         print("gebaut:", src.name)
 
