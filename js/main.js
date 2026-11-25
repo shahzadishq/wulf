@@ -155,11 +155,98 @@
   }
 
   /* ---------- Formular ---------- */
+  var emailOk = function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); };
+  function markField(el, ok) {
+    var field = el.closest('.field');
+    var err = field && field.querySelector('.field__error');
+    if (field) field.classList.toggle('has-error', !ok);
+    if (!ok) { el.setAttribute('aria-invalid', 'true'); if (err) el.setAttribute('aria-describedby', err.id); }
+    else { el.removeAttribute('aria-invalid'); el.removeAttribute('aria-describedby'); }
+    return ok;
+  }
+  function showDone(form) {
+    var btn = form.querySelector('button[type="submit"]');
+    var lbl = btn && btn.querySelector('.btn__label');
+    if (btn) btn.classList.add('is-loading');
+    if (lbl) lbl.textContent = 'Wird gesendet …';
+    /* TODO: an das bestehende WordPress- oder Mail-Backend anbinden */
+    setTimeout(function () {
+      Array.prototype.forEach.call(form.children, function (n) { if (!n.classList.contains('form__done')) n.hidden = true; });
+      var done = form.querySelector('.form__done');
+      done.hidden = false; done.setAttribute('tabindex', '-1'); done.focus();
+    }, reduce ? 0 : 1100);
+  }
+
   var form = document.getElementById('form');
-  if (form) {
+  if (form && form.classList.contains('mform')) {
+    /* Mehrstufig: Thema → Anliegen → Kontakt */
+    var steps = form.querySelectorAll('.mstep');
+    var marks = form.querySelectorAll('.msteps li');
+    var back = form.querySelector('.mnav__back'), next = form.querySelector('.mnav__next'), send = form.querySelector('.mnav__send');
+    var nowEl = form.querySelector('[data-step-now]');
+    var cur = 0;
+    var validate = function (i) {
+      var st = steps[i];
+      if (i === 0) {
+        var ok = !!form.querySelector('input[name="topic"]:checked');
+        st.classList.toggle('has-error', !ok);
+        if (!ok) st.querySelector('input[name="topic"]').focus();
+        return ok;
+      }
+      if (i === 1) {
+        var m = document.getElementById('f-msg');
+        if (!markField(m, m.value.trim().length > 4)) { m.focus(); return false; }
+        return true;
+      }
+      var first = null;
+      [['f-name', function (el) { return el.value.trim().length > 1; }],
+       ['f-mail', function (el) { return emailOk(el.value); }],
+       ['f-ok', function (el) { return el.checked; }]].forEach(function (c) {
+        var el = document.getElementById(c[0]);
+        if (!markField(el, c[1](el)) && !first) first = el;
+      });
+      if (first) { first.focus(); return false; }
+      return true;
+    };
+    var go = function (i, dir) {
+      form.setAttribute('data-dir', dir);
+      steps[cur].classList.remove('is-active');
+      cur = i;
+      steps[cur].classList.add('is-active');
+      marks.forEach(function (m, k) { m.classList.toggle('is-done', k < cur); m.classList.toggle('is-current', k === cur); });
+      if (nowEl) nowEl.textContent = String(cur + 1);
+      back.hidden = cur === 0;
+      next.hidden = cur === steps.length - 1;
+      send.hidden = cur !== steps.length - 1;
+      var focusable = steps[cur].querySelector('input:not([type="radio"]), textarea') || steps[cur].querySelector('input:checked, input');
+      if (focusable && dir) setTimeout(function () { focusable.focus({ preventScroll: true }); }, 60);
+      var top = form.getBoundingClientRect().top;
+      if (top < 80) window.scrollBy({ top: top - 110, behavior: reduce ? 'auto' : 'smooth' });
+    };
+    next.addEventListener('click', function () { if (validate(cur)) go(cur + 1, 'next'); });
+    back.addEventListener('click', function () { go(cur - 1, 'back'); });
+    /* Thema gewählt → automatisch weiter */
+    form.querySelectorAll('input[name="topic"]').forEach(function (r) {
+      r.addEventListener('change', function () {
+        steps[0].classList.remove('has-error');
+        setTimeout(function () { if (cur === 0) go(1, 'next'); }, reduce ? 0 : 380);
+      });
+    });
+    /* Enter im Textfeld (außer Textarea) führt zum nächsten Schritt */
+    form.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && e.target.tagName === 'INPUT' && e.target.type !== 'checkbox' && cur < steps.length - 1) { e.preventDefault(); next.click(); }
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!validate(cur)) return;
+      marks.forEach(function (m) { m.classList.add('is-done'); m.classList.remove('is-current'); });
+      showDone(form);
+    });
+  } else if (form) {
+    /* Einfaches Formular (Kontaktseite) */
     var checks = [
       ['f-name', function (el) { return el.value.trim().length > 1; }],
-      ['f-mail', function (el) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()); }],
+      ['f-mail', function (el) { return emailOk(el.value); }],
       ['f-msg', function (el) { return el.value.trim().length > 4; }],
       ['f-ok', function (el) { return el.checked; }]
     ];
@@ -168,23 +255,41 @@
       var firstBad = null;
       checks.forEach(function (c) {
         var el = document.getElementById(c[0]);
-        var ok = c[1](el);
-        var field = el.closest('.field');
-        var err = field.querySelector('.field__error');
-        field.classList.toggle('has-error', !ok);
-        if (!ok) { el.setAttribute('aria-invalid', 'true'); el.setAttribute('aria-describedby', err.id); if (!firstBad) firstBad = el; }
-        else { el.removeAttribute('aria-invalid'); el.removeAttribute('aria-describedby'); }
+        if (el && !markField(el, c[1](el)) && !firstBad) firstBad = el;
       });
       if (firstBad) { firstBad.focus(); return; }
-      /* TODO: an das bestehende WordPress- oder Mail-Backend anbinden */
-      var btn = form.querySelector('button[type="submit"]');
-      var lbl = btn.querySelector('.btn__label');
-      btn.classList.add('is-loading'); if (lbl) lbl.textContent = 'Wird gesendet …';
-      setTimeout(function () {
-        Array.prototype.forEach.call(form.children, function (n) { if (!n.classList.contains('form__done')) n.hidden = true; });
-        var done = form.querySelector('.form__done');
-        done.hidden = false; done.setAttribute('tabindex', '-1'); done.focus();
-      }, reduce ? 0 : 1100);
+      showDone(form);
+    });
+  }
+
+
+  /* ---------- Team-Variante C: Foto wechselt mit dem Namen ---------- */
+  var vcBtns = document.querySelectorAll('.vc__btn');
+  if (vcBtns.length) {
+    var vcSet = function (i) {
+      document.querySelectorAll('.vc__img, .vc__cap').forEach(function (el) { el.classList.toggle('is-active', el.dataset.i === i); });
+      vcBtns.forEach(function (b) { var on = b.dataset.i === i; b.classList.toggle('is-active', on); b.setAttribute('aria-pressed', String(on)); });
+    };
+    vcBtns.forEach(function (b) {
+      b.addEventListener('click', function () { vcSet(b.dataset.i); });
+      b.addEventListener('mouseenter', function () { vcSet(b.dataset.i); });
+      b.addEventListener('focus', function () { vcSet(b.dataset.i); });
+    });
+  }
+
+  /* ---------- Team-Variante D: Karussell ---------- */
+  var vd = document.querySelector('.vd');
+  if (vd) {
+    var step = function (dir) {
+      var card = vd.querySelector('.vd__card');
+      var w = card ? card.getBoundingClientRect().width + 24 : 300;
+      vd.scrollBy({ left: dir * w, behavior: reduce ? 'auto' : 'smooth' });
+    };
+    document.querySelector('.vd__prev').addEventListener('click', function () { step(-1); });
+    document.querySelector('.vd__next').addEventListener('click', function () { step(1); });
+    vd.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
     });
   }
 

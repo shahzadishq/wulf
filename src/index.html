@@ -111,7 +111,7 @@
     </section>
 
     <!-- ===================== LAUFBAND ===================== -->
-    <div class="marquee" aria-hidden="true">
+    <div class="marquee" aria-hidden="true" data-inview>
       <div class="marquee__track">
         <span>Arbeitsrecht</span><svg><use href="#i-spark"/></svg><span>Familienrecht</span><svg><use href="#i-spark"/></svg><span>Erbrecht</span><svg><use href="#i-spark"/></svg><span>Immobilienrecht</span><svg><use href="#i-spark"/></svg><span>Strafrecht</span><svg><use href="#i-spark"/></svg><span>Mediation</span><svg><use href="#i-spark"/></svg>
         <span>Arbeitsrecht</span><svg><use href="#i-spark"/></svg><span>Familienrecht</span><svg><use href="#i-spark"/></svg><span>Erbrecht</span><svg><use href="#i-spark"/></svg><span>Immobilienrecht</span><svg><use href="#i-spark"/></svg><span>Strafrecht</span><svg><use href="#i-spark"/></svg><span>Mediation</span><svg><use href="#i-spark"/></svg>
@@ -192,55 +192,84 @@
             </li>
           </ul>
           <p class="cinfo__extra reveal" style="--d:.4s"><svg><use href="#i-video"/></svg> Beratung auch am Telefon oder per Video.</p>
-          <p class="cinfo__extra cinfo__extra--alert reveal" style="--d:.45s"><svg><use href="#i-alert"/></svg> Läuft eine Frist? Bitte rufen Sie uns zusätzlich an.</p>
         </div>
 
-        <form class="hform reveal" id="form" novalidate style="--d:.15s">
-          <h3 class="hform__title">Ihre Nachricht</h3>
-          <div class="hform__row">
-            <div class="field">
-              <label for="f-name">Name</label>
-              <input id="f-name" name="name" type="text" autocomplete="name" required>
-              <p class="field__error" id="e-name">Bitte geben Sie Ihren Namen ein.</p>
-            </div>
-            <div class="field">
-              <label for="f-mail">E-Mail</label>
-              <input id="f-mail" name="email" type="email" autocomplete="email" required>
-              <p class="field__error" id="e-mail">Bitte geben Sie eine gültige E-Mail-Adresse ein.</p>
-            </div>
+        <form class="hform mform reveal" id="form" novalidate style="--d:.15s">
+          <div class="mform__top">
+            <h3 class="hform__title">Ihre Nachricht</h3>
+            <p class="mform__count" aria-live="polite">Schritt <span data-step-now>1</span> von 3</p>
           </div>
-          <div class="hform__row">
-            <div class="field">
-              <label for="f-tel">Telefon <span class="optional">(für Rückruf)</span></label>
-              <input id="f-tel" name="phone" type="tel" autocomplete="tel">
+          <ol class="msteps" aria-hidden="true">
+            <li class="is-current"><span>1</span>Thema</li>
+            <li><span>2</span>Anliegen</li>
+            <li><span>3</span>Kontakt</li>
+          </ol>
+
+          <!-- Schritt 1 -->
+          <fieldset class="mstep is-active" data-step="1">
+            <legend class="mstep__q">Worum geht es?</legend>
+            <div class="pick pick--grid">
+              <label><input type="radio" name="topic" value="Arbeitsrecht"><span><svg><use href="#i-brief"/></svg>Arbeitsrecht</span></label>
+              <label><input type="radio" name="topic" value="Familienrecht"><span><svg><use href="#i-family"/></svg>Familienrecht</span></label>
+              <label><input type="radio" name="topic" value="Erbrecht"><span><svg><use href="#i-scroll"/></svg>Erbrecht</span></label>
+              <label><input type="radio" name="topic" value="Immobilienrecht"><span><svg><use href="#i-house"/></svg>Immobilienrecht</span></label>
+              <label><input type="radio" name="topic" value="Strafrecht"><span><svg><use href="#i-scale"/></svg>Strafrecht</span></label>
+              <label><input type="radio" name="topic" value="Mediation"><span><svg><use href="#i-hands"/></svg>Mediation</span></label>
+              <label class="pick__wide"><input type="radio" name="topic" value="Etwas anderes"><span><svg><use href="#i-spark"/></svg>Etwas anderes / Ich bin unsicher</span></label>
             </div>
+            <p class="field__error mstep__error" id="e-topic">Bitte wählen Sie ein Thema aus.</p>
+          </fieldset>
+
+          <!-- Schritt 2 -->
+          <fieldset class="mstep" data-step="2">
+            <legend class="mstep__q">Was ist passiert?</legend>
             <div class="field">
-              <label for="f-topic">Rechtsgebiet</label>
-              <div class="select">
-                <select id="f-topic" name="topic">
-                  <option value="">Bitte wählen</option>
-                  <option>Arbeitsrecht</option>
-                  <option>Familienrecht</option>
-                  <option>Erbrecht</option>
-                  <option>Immobilienrecht</option>
-                  <option>Strafrecht</option>
-                  <option>Mediation</option>
-                  <option>Etwas anderes</option>
-                </select>
+              <label for="f-msg">Beschreiben Sie Ihr Anliegen in eigenen Worten</label>
+              <textarea id="f-msg" name="message" rows="6" placeholder="Zum Beispiel: Ich habe am … eine Kündigung erhalten."></textarea>
+              <p class="field__hint">Stichpunkte genügen. Wichtige Daten wie Fristen gern mit angeben.</p>
+              <p class="field__error" id="e-msg">Bitte beschreiben Sie kurz Ihr Anliegen.</p>
+            </div>
+            <p class="mnote"><svg><use href="#i-alert"/></svg> Läuft eine Frist? Bitte rufen Sie uns zusätzlich an: <a href="tel:+4939173746100">0391 737 461 00</a></p>
+          </fieldset>
+
+          <!-- Schritt 3 -->
+          <fieldset class="mstep" data-step="3">
+            <legend class="mstep__q">Wie erreichen wir Sie?</legend>
+            <div class="hform__row">
+              <div class="field">
+                <label for="f-name">Ihr Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name">
+                <p class="field__error" id="e-name">Bitte geben Sie Ihren Namen ein.</p>
+              </div>
+              <div class="field">
+                <label for="f-tel">Telefon <span class="optional">(freiwillig)</span></label>
+                <input id="f-tel" name="phone" type="tel" autocomplete="tel">
               </div>
             </div>
+            <div class="field">
+              <label for="f-mail">Ihre E-Mail-Adresse</label>
+              <input id="f-mail" name="email" type="email" autocomplete="email">
+              <p class="field__error" id="e-mail">Bitte geben Sie eine E-Mail-Adresse ein, z. B. name@beispiel.de.</p>
+            </div>
+            <div class="chips-field">
+              <p class="chips-field__label" id="reply-label">Wie dürfen wir uns melden?</p>
+              <div class="pick pick--two" role="radiogroup" aria-labelledby="reply-label">
+                <label><input type="radio" name="reply" value="Rückruf" checked><span><svg><use href="#i-phone"/></svg> Rückruf</span></label>
+                <label><input type="radio" name="reply" value="E-Mail"><span><svg><use href="#i-mail"/></svg> E-Mail</span></label>
+              </div>
+            </div>
+            <div class="field field--check">
+              <input id="f-ok" name="consent" type="checkbox">
+              <label for="f-ok">Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Mehr in der <a href="https://kanzlei-wulf.de/datenschutz/">Datenschutzerklärung</a>.</label>
+              <p class="field__error" id="e-ok">Bitte bestätigen Sie Ihr Einverständnis.</p>
+            </div>
+          </fieldset>
+
+          <div class="mnav">
+            <button class="btn btn--line mnav__back" type="button" hidden><svg class="ico ico--flip"><use href="#i-arrow"/></svg> Zurück</button>
+            <button class="btn mnav__next" type="button">Weiter <svg class="ico"><use href="#i-arrow"/></svg></button>
+            <button class="btn btn--send mnav__send" type="submit" hidden><span class="btn__label">Anfrage senden</span><svg class="ico"><use href="#i-send"/></svg></button>
           </div>
-          <div class="field">
-            <label for="f-msg">Ihr Anliegen</label>
-            <textarea id="f-msg" name="message" rows="3" required placeholder="Beschreiben Sie kurz, worum es geht."></textarea>
-            <p class="field__error" id="e-msg">Bitte beschreiben Sie kurz Ihr Anliegen.</p>
-          </div>
-          <div class="field field--check">
-            <input id="f-ok" name="consent" type="checkbox" required>
-            <label for="f-ok">Ich bin mit der Speicherung meiner Angaben zur Bearbeitung einverstanden. <a href="https://kanzlei-wulf.de/datenschutz/">Datenschutz</a></label>
-            <p class="field__error" id="e-ok">Bitte bestätigen Sie Ihr Einverständnis.</p>
-          </div>
-          <button class="btn btn--block btn--send" type="submit"><span class="btn__label">Anfrage senden</span><svg class="ico"><use href="#i-send"/></svg></button>
 
           <div class="form__done" role="status" aria-live="polite" hidden>
             <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".25"/><path d="M15 27l7 7 15-15" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>

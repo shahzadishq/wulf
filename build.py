@@ -103,16 +103,23 @@ FOOT = """  </main>
       </div>
       <div>
         <h2>Kanzlei Magdeburg</h2>
-        <p>Breiter Weg 31<br>39104 Magdeburg<br><a class="footer__phone" href="tel:+4939173746100">0391 737 461 00</a></p>
+        <ul class="fcontact">
+          <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Breiter+Weg+31+39104+Magdeburg">Breiter Weg 31<br>39104 Magdeburg</a></li>
+          <li><svg><use href="#i-phone"/></svg><a class="footer__phone" href="tel:+4939173746100">0391 737 461 00</a></li>
+        </ul>
       </div>
       <div>
         <h2>Kanzlei Stendal</h2>
-        <p>Breite Straße 54<br>39576 Stendal<br><a class="footer__phone" href="tel:+4939312527222">03931 252 72 22</a></p>
+        <ul class="fcontact">
+          <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Breite+Stra%C3%9Fe+54+39576+Stendal">Breite Straße 54<br>39576 Stendal</a></li>
+          <li><svg><use href="#i-phone"/></svg><a class="footer__phone" href="tel:+4939312527222">03931 252 72 22</a></li>
+        </ul>
       </div>
       <div>
         <h2>Service</h2>
         <ul>
-          <li><a href="mailto:info@kanzlei-wulf.de">info@kanzlei-wulf.de</a></li>
+          <li class="fcontact__mail"><svg><use href="#i-mail"/></svg><a href="mailto:info@kanzlei-wulf.de">info@kanzlei-wulf.de</a></li>
+          <li class="fcontact__mail"><svg><use href="#i-clock"/></svg><span>Mo–Fr, 8 bis 20 Uhr</span></li>
           <li><a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></li>
           <li><a href="https://kanzlei-wulf.de/news/">Ratgeber und News</a></li>
           <li><a href="https://kanzlei-wulf.de/podcast/">Podcast</a></li>
