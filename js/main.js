@@ -21,7 +21,7 @@
   function onScroll() {
     var y = window.scrollY;
     if (header) header.classList.toggle('is-solid', y > 60);
-    if (fab) fab.classList.toggle('is-shown', y > 500);
+    if (fab) fab.classList.toggle('is-shown', y > 250);
     if (heroImg && !reduce && y < 1000) heroImg.style.transform = 'translate3d(0,' + (y * 0.12).toFixed(1) + 'px,0)';
     ticking = false;
   }
