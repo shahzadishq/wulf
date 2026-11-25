@@ -27,3 +27,7 @@ Statischer Entwurf für kanzlei-wulf.de (HTML, CSS, JS – keine Abhängigkeiten
 ## Design 2 (Alternative zur Präsentation)
 Ordner `v2/` – eigenständige Startseite mit eigenem Stil: Weinrot als Hauptfarbe, Bodoni Moda + Figtree, Guilloche-Muster (wie auf Urkunden), Bögen als Bildrahmen, horizontal scrollende Rechtsgebiete, Wort-für-Wort-Satz, Schritte mit Sticky-Spalte.
 Live: https://shahzadishq.github.io/wulf/v2/
+
+## Design 3 (klassisch-premium, Farben der bestehenden Website)
+Ordner `v3/` – Petrol #173F53, Karmin #970D32, Playfair Display + Open Sans. Hintergrundbilder (Magdeburger Dom, Team), Muster, Feature-Boxen, Rechtsgebiete mit Bild-Hover, Zähler, Ablauf (sticky), Team-Karten, Frist-Banner, FAQ (echte Inhalte), Ratgeber (echte Artikel), Kontakt mit Anfahrt/Parken.
+Live: https://shahzadishq.github.io/wulf/v3/
