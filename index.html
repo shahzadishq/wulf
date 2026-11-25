@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=202611251149">
+  <link rel="stylesheet" href="css/styles.css?v=202611251157">
   <script>document.documentElement.classList.add('js');try{var s=localStorage.getItem('wulf-size');if(s)document.documentElement.setAttribute('data-size',s)}catch(e){}</script>
 </head>
 <body>
@@ -202,28 +202,32 @@
         <div class="process" data-inview>
           <span class="process__track" aria-hidden="true"><span></span></span>
           <ol class="process__list">
-            <li class="reveal" style="--d:.2s"><h3>Ihr Anliegen verstehen</h3><p>Wir klären den Sachverhalt und fragen, was Sie erreichen möchten.</p></li>
-            <li class="reveal" style="--d:.5s"><h3>Möglichkeiten erläutern</h3><p>Sie erfahren Ihre Handlungsmöglichkeiten mit Risiken und Kosten – in verständlichen Worten.</p></li>
-            <li class="reveal" style="--d:.8s"><h3>Das Vorgehen abstimmen</h3><p>Den weiteren Weg legen wir gemeinsam mit Ihnen fest und setzen ihn konsequent um.</p></li>
+            <li style="--d:.25s"><h3>Ihr Anliegen verstehen</h3><p>Wir klären den Sachverhalt und fragen, was Sie erreichen möchten.</p></li>
+            <li style="--d:1.05s"><h3>Möglichkeiten erläutern</h3><p>Sie erfahren Ihre Handlungsmöglichkeiten mit Risiken und Kosten – in verständlichen Worten.</p></li>
+            <li style="--d:1.85s"><h3>Das Vorgehen abstimmen</h3><p>Den weiteren Weg legen wir gemeinsam mit Ihnen fest und setzen ihn konsequent um.</p></li>
           </ol>
         </div>
       </div>
     </section>
 
-    <!-- ===================== TEAM ===================== -->
+    <!-- ===================== TEAM (Karussell) ===================== -->
     <section class="section" id="anwaelte">
       <div class="wrap">
-        <div class="section__head">
-          <div><p class="kicker reveal">Anwälte</p><h2 class="reveal" style="--d:.1s">Die Menschen hinter unserer Beratung</h2></div>
-          <p class="reveal" style="--d:.2s">Sechs Rechtsanwälte mit langjähriger Erfahrung. <a href="anwaelte.html">Alle Profile ansehen</a></p>
+        <div class="vd__head">
+          <div>
+            <p class="kicker reveal">Anwälte</p>
+            <h2 class="reveal" style="--d:.1s">Die Menschen hinter unserer Beratung</h2>
+            <p class="reveal" style="--d:.2s">Sechs Rechtsanwälte mit langjähriger Erfahrung. <a href="anwaelte.html">Alle Profile ansehen</a></p>
+          </div>
+          <div class="vd__nav reveal" style="--d:.3s"><button type="button" class="vd__prev" aria-label="Vorheriger Anwalt"><svg class="ico ico--flip"><use href="#i-arrow"/></svg></button><button type="button" class="vd__next" aria-label="Nächster Anwalt"><svg class="ico"><use href="#i-arrow"/></svg></button></div>
         </div>
-        <ul class="team">
-          <li class="member reveal"><a href="anwaelte.html#sandro-wulf" data-tilt><div class="member__photo" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-12_3840x2160-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Sandro Wulf</h3><p>Fachanwalt für Arbeitsrecht, Mediator</p></a></li>
-          <li class="member reveal" style="--d:.1s"><a href="anwaelte.html#hendrik-lippmann" data-tilt><div class="member__photo" data-initials="HL"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-16-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Hendrik Lippmann</h3><p>Partner, Fachanwalt für Familienrecht</p></a></li>
-          <li class="member reveal" style="--d:.2s"><a href="anwaelte.html#jan-steinmetz" data-tilt><div class="member__photo" data-initials="JS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-7-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Jan Steinmetz</h3><p>Fachanwalt für Miet- und Wohnungseigentumsrecht und für Arbeitsrecht</p></a></li>
-          <li class="member reveal"><a href="anwaelte.html#lars-haenig" data-tilt><div class="member__photo" data-initials="LH"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-15_3840x2160-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Lars Hänig</h3><p>Arbeitsrecht, IT-Recht und Online-Handel</p></a></li>
-          <li class="member reveal" style="--d:.1s"><a href="anwaelte.html#maximilian-scholze" data-tilt><div class="member__photo" data-initials="MS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/04/Wulf-und-Collegen_Mitarbeiterportraits-9-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Maximilian Scholze</h3><p>Fachanwalt für Strafrecht</p></a></li>
-          <li class="member reveal" style="--d:.2s"><a href="anwaelte.html#sebastian-weise" data-tilt><div class="member__photo" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2025/03/Herr_Weise_Hintergrund-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Sebastian Weise</h3><p>Rechtsanwalt, Familienrecht</p></a></li>
+        <ul class="vd vd--home" tabindex="0" data-inview aria-label="Anwälte, seitlich blättern">
+          <li class="vd__card"><a href="anwaelte.html#sandro-wulf"><div class="vd__photo" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-12_3840x2160-scaled.jpg" alt=""></div><div class="vd__body"><h3>Sandro Wulf</h3><p>Fachanwalt für Arbeitsrecht, Mediator</p><span class="vd__tags"><span>Arbeitsrecht</span><span>Kündigungsschutz</span><span>Mediation</span></span></div></a></li>
+          <li class="vd__card"><a href="anwaelte.html#hendrik-lippmann"><div class="vd__photo" data-initials="HL"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-16-scaled.jpg" alt=""></div><div class="vd__body"><h3>Hendrik Lippmann</h3><p>Partner, Fachanwalt für Familienrecht</p><span class="vd__tags"><span>Familien- und Scheidungsrecht</span><span>Erbrecht</span></span></div></a></li>
+          <li class="vd__card"><a href="anwaelte.html#jan-steinmetz"><div class="vd__photo" data-initials="JS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-7-scaled.jpg" alt=""></div><div class="vd__body"><h3>Jan Steinmetz</h3><p>Fachanwalt für Miet- und WEG-Recht und für Arbeitsrecht</p><span class="vd__tags"><span>Immobilien- und Mietrecht</span><span>Arbeitsrecht</span></span></div></a></li>
+          <li class="vd__card"><a href="anwaelte.html#lars-haenig"><div class="vd__photo" data-initials="LH"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-15_3840x2160-scaled.jpg" alt=""></div><div class="vd__body"><h3>Lars Hänig</h3><p>Rechtsanwalt</p><span class="vd__tags"><span>Arbeitsrecht</span><span>IT-Recht</span><span>Online-Handel</span></span></div></a></li>
+          <li class="vd__card"><a href="anwaelte.html#maximilian-scholze"><div class="vd__photo" data-initials="MS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/04/Wulf-und-Collegen_Mitarbeiterportraits-9-scaled.jpg" alt=""></div><div class="vd__body"><h3>Maximilian Scholze</h3><p>Fachanwalt für Strafrecht</p><span class="vd__tags"><span>Strafrecht</span><span>Bußgeldrecht</span><span>Kündigungsschutz</span></span></div></a></li>
+          <li class="vd__card"><a href="anwaelte.html#sebastian-weise"><div class="vd__photo" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2025/03/Herr_Weise_Hintergrund-scaled.jpg" alt=""></div><div class="vd__body"><h3>Sebastian Weise</h3><p>Rechtsanwalt</p><span class="vd__tags"><span>Familienrecht</span></span></div></a></li>
         </ul>
       </div>
     </section>
@@ -401,6 +405,6 @@
     <a href="tel:+4939312527222"><span>Stendal</span><strong>Anrufen</strong></a>
   </div>
 
-  <script src="js/main.js?v=202611251149"></script>
+  <script src="js/main.js?v=202611251157"></script>
 </body>
 </html>

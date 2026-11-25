@@ -287,6 +287,13 @@
     };
     document.querySelector('.vd__prev').addEventListener('click', function () { step(-1); });
     document.querySelector('.vd__next').addEventListener('click', function () { step(1); });
+    var prevB = document.querySelector('.vd__prev'), nextB = document.querySelector('.vd__next');
+    var upd = function () {
+      prevB.disabled = vd.scrollLeft < 8;
+      nextB.disabled = vd.scrollLeft + vd.clientWidth > vd.scrollWidth - 8;
+    };
+    vd.addEventListener('scroll', function () { requestAnimationFrame(upd); }, { passive: true });
+    window.addEventListener('resize', upd); upd();
     vd.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
       if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
