@@ -585,3 +585,18 @@ a { color: inherit; }
   .mnav .mnav__back { padding-inline: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) { .mstep.is-active { animation: none; } }
+
+/* ---------- Änderungen v3.2 ---------- */
+/* FAQ: linke Spalte bleibt stehen, bis alle Fragen durchgescrollt sind */
+@media (min-width: 961px) {
+  .faq__in { align-items: start; }
+  .faq__side { position: sticky; top: 7rem; }
+}
+/* Handy: Teamfoto oben deutlich sichtbar, Text darunter */
+@media (max-width: 760px) {
+  .hero { background: var(--petrol-900); padding-top: 19rem; }
+  .hero__bg { inset: 0 0 auto 0; height: 24rem; overflow: hidden; }
+  .hero__bg img { height: 153%; object-position: 80% 0; animation: none; }
+  .hero__shade { background: linear-gradient(180deg, rgba(8,32,44,.1) 0%, rgba(8,32,44,.25) 9rem, rgba(13,44,59,.85) 19rem, var(--petrol-900) 24rem); }
+  .hero__lines { -webkit-mask-image: linear-gradient(180deg, transparent 18rem, #000 30rem); mask-image: linear-gradient(180deg, transparent 18rem, #000 30rem); }
+}

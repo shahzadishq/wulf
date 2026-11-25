@@ -55,7 +55,7 @@
     top.classList.toggle('show', y > 600);
     top.style.setProperty('--p', max > 0 ? (y / max).toFixed(3) : 0);
     if (!reduce) {
-      if (heroBg && y < vh * 1.2) heroBg.style.transform = 'translate3d(0,' + (y * 0.25).toFixed(1) + 'px,0)';
+      if (heroBg && innerWidth > 760 && y < vh * 1.2) heroBg.style.transform = 'translate3d(0,' + (y * 0.25).toFixed(1) + 'px,0)';
       pars.forEach(bg => { const r = bg.parentElement.getBoundingClientRect(); if (r.bottom > 0 && r.top < vh) bg.style.transform = 'translate3d(0,' + ((r.top + r.height / 2 - vh / 2) * -0.18).toFixed(1) + 'px,0)'; });
     }
     if (stepEls.length && innerWidth > 960) {
