@@ -45,8 +45,8 @@
   links.forEach(a => { const s = $(a.getAttribute('href')); if (s) secIo.observe(s); });
 
   /* Scroll-Effekte */
-  const head = $('#head'), top = $('.totop'), heroImg = $('.hero__bg img');
-  const pars = $$('.counter__bg img, .alert__bg img');
+  const head = $('#head'), top = $('.totop'), heroBg = $('.hero__bg');
+  const pars = $$('.counter__bg, .alert__bg');
   const stepEls = $$('.step'), stepsSec = $('.steps'), meter = $('.steps__meter');
   const onScroll = () => {
     const y = scrollY, vh = innerHeight;
@@ -55,8 +55,8 @@
     top.classList.toggle('show', y > 600);
     top.style.setProperty('--p', max > 0 ? (y / max).toFixed(3) : 0);
     if (!reduce) {
-      if (heroImg && y < vh * 1.2) heroImg.parentElement.style.transform = 'translate3d(0,' + (y * 0.25).toFixed(1) + 'px,0)';
-      pars.forEach(img => { const r = img.parentElement.parentElement.getBoundingClientRect(); if (r.bottom > 0 && r.top < vh) img.style.transform = 'translate3d(0,' + ((r.top + r.height / 2 - vh / 2) * -0.18).toFixed(1) + 'px,0)'; });
+      if (heroBg && y < vh * 1.2) heroBg.style.transform = 'translate3d(0,' + (y * 0.25).toFixed(1) + 'px,0)';
+      pars.forEach(bg => { const r = bg.parentElement.getBoundingClientRect(); if (r.bottom > 0 && r.top < vh) bg.style.transform = 'translate3d(0,' + ((r.top + r.height / 2 - vh / 2) * -0.18).toFixed(1) + 'px,0)'; });
     }
     if (stepEls.length && innerWidth > 960) {
       let best = 0, bd = Infinity;
@@ -88,18 +88,65 @@
   };
   live(); setInterval(live, 60000);
 
-  /* Formular */
-  const form = $('#form3');
+  /* Mehrstufiges Formular: Thema → Anliegen → Kontakt */
+  const form = $('#form');
   if (form) {
-    const rules = [['#n3', el => el.value.trim().length > 1], ['#m3', el => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim())], ['#x3', el => el.value.trim().length > 4], ['#c3', el => el.checked]];
+    const steps = $$('.mstep', form), marks = $$('.msteps li', form);
+    const back = $('.mnav__back', form), next = $('.mnav__next', form), send = $('.mnav__send', form), now = $('[data-step-now]', form);
+    let cur = 0;
+    const mark = (el, ok) => {
+      const f = el.closest('.field'), err = f && $('.field__error', f);
+      if (f) f.classList.toggle('has-error', !ok);
+      if (!ok) { el.setAttribute('aria-invalid', 'true'); if (err) el.setAttribute('aria-describedby', err.id); }
+      else { el.removeAttribute('aria-invalid'); el.removeAttribute('aria-describedby'); }
+      return ok;
+    };
+    const validate = i => {
+      if (i === 0) {
+        const ok = !!$('input[name="topic"]:checked', form);
+        steps[0].classList.toggle('has-error', !ok);
+        if (!ok) $('input[name="topic"]', form).focus();
+        return ok;
+      }
+      if (i === 1) { const m = $('#f-msg'); if (!mark(m, m.value.trim().length > 4)) { m.focus(); return false; } return true; }
+      let first = null;
+      [['#f-name', el => el.value.trim().length > 1], ['#f-mail', el => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim())], ['#f-ok', el => el.checked]]
+        .forEach(([sel, ok]) => { const el = $(sel); if (!mark(el, ok(el)) && !first) first = el; });
+      if (first) { first.focus(); return false; }
+      return true;
+    };
+    const go = (i, dir) => {
+      form.setAttribute('data-dir', dir);
+      steps[cur].classList.remove('is-active');
+      cur = i;
+      steps[cur].classList.add('is-active');
+      marks.forEach((m, k) => { m.classList.toggle('is-done', k < cur); m.classList.toggle('is-current', k === cur); });
+      if (now) now.textContent = String(cur + 1);
+      back.hidden = cur === 0; next.hidden = cur === steps.length - 1; send.hidden = cur !== steps.length - 1;
+      const f = $('input:not([type="radio"]), textarea', steps[cur]) || $('input:checked, input', steps[cur]);
+      if (f) setTimeout(() => f.focus({ preventScroll: true }), 60);
+      const t = form.getBoundingClientRect().top;
+      if (t < 90) scrollBy({ top: t - 120, behavior: reduce ? 'auto' : 'smooth' });
+    };
+    next.addEventListener('click', () => { if (validate(cur)) go(cur + 1, 'next'); });
+    back.addEventListener('click', () => go(cur - 1, 'back'));
+    $$('input[name="topic"]', form).forEach(r => r.addEventListener('change', () => {
+      steps[0].classList.remove('has-error');
+      setTimeout(() => { if (cur === 0) go(1, 'next'); }, reduce ? 0 : 380);
+    }));
+    form.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && e.target.tagName === 'INPUT' && e.target.type !== 'checkbox' && cur < steps.length - 1) { e.preventDefault(); next.click(); }
+    });
     form.addEventListener('submit', e => {
       e.preventDefault();
-      let first = null;
-      rules.forEach(([s, ok]) => { const el = $(s, form), w = el.closest('.ff, .fchk'), g = ok(el); w.classList.toggle('bad', !g); el.setAttribute('aria-invalid', String(!g)); if (!g && !first) first = el; });
-      if (first) { first.focus(); return; }
-      const btn = $('button[type="submit"]', form); btn.classList.add('busy'); $('.lbl', btn).textContent = 'Wird gesendet …';
+      if (!validate(cur)) return;
+      marks.forEach(m => { m.classList.add('is-done'); m.classList.remove('is-current'); });
+      send.classList.add('is-loading'); $('.btn__label', send).textContent = 'Wird gesendet …';
       /* TODO: an das Mail- oder WordPress-Backend anbinden */
-      setTimeout(() => { [...form.children].forEach(c => { if (!c.classList.contains('done')) c.hidden = true; }); const d = $('.done', form); d.hidden = false; d.tabIndex = -1; d.focus(); }, reduce ? 0 : 1100);
+      setTimeout(() => {
+        [...form.children].forEach(c => { if (!c.classList.contains('form__done')) c.hidden = true; });
+        const d = $('.form__done', form); d.hidden = false; d.tabIndex = -1; d.focus();
+      }, reduce ? 0 : 1100);
     });
   }
   const yr = $('#yr'); if (yr) yr.textContent = new Date().getFullYear();

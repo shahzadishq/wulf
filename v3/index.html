@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="v3.css?v=2">
+  <link rel="stylesheet" href="v3.css?v=3">
   <script>document.documentElement.classList.add('js');try{var s=localStorage.getItem('wulf3-size');if(s)document.documentElement.setAttribute('data-size',s)}catch(e){}</script>
 </head>
 <body>
@@ -37,6 +37,9 @@
   <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16V11l2-5h10l2 5v5M3 16h18v3H3zM5 11h14"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></g></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></g></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c.6 4.6 2.4 7.4 7 8-4.6.6-6.4 3.4-7 8-.6-4.6-2.4-7.4-7-8 4.6-.6 6.4-3.4 7-8z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.01"/></g></symbol>
   <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-6 6 6-6 6 6"/></symbol>
 </svg>
 
@@ -108,13 +111,6 @@
         <div><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><p><strong>4,88 von 5</strong> aus 1.308 Bewertungen</p></div>
       </div>
     </div>
-    <aside class="hero__card up" style="--d:.6s" aria-label="Schnellkontakt">
-      <p class="hero__card-k">Jetzt Kontakt aufnehmen</p>
-      <a class="hero__line" href="tel:+4939173746100"><span class="ic"><svg><use href="#i-phone"/></svg></span><span><small>Kanzlei Magdeburg</small>0391 73746100</span></a>
-      <a class="hero__line" href="tel:+4939312527222"><span class="ic"><svg><use href="#i-phone"/></svg></span><span><small>Kanzlei Stendal</small>03931 2527222</span></a>
-      <a class="hero__line" href="mailto:info@kanzlei-wulf.de"><span class="ic"><svg><use href="#i-mail"/></svg></span><span><small>E-Mail</small>info@kanzlei-wulf.de</span></a>
-      <p class="hero__card-live" data-live-pill><i></i><span>Mo–Fr, 08:00–20:00 Uhr erreichbar</span></p>
-    </aside>
   </div>
 </section>
 
@@ -307,21 +303,88 @@
       </div>
     </div>
 
-    <form class="form rv" id="form3" novalidate style="--d:.15s">
-      <h3>Kostenlose Anfrage</h3>
-      <p class="form__sub">Wir melden uns so bald wie möglich bei Ihnen.</p>
-      <div class="frow">
-        <div class="ff"><label for="n3">Ihr Name *</label><input id="n3" type="text" autocomplete="name" required><p class="err">Bitte geben Sie Ihren Namen ein.</p></div>
-        <div class="ff"><label for="t3">Telefon</label><input id="t3" type="tel" autocomplete="tel"></div>
+    <form class="form mform rv" id="form" novalidate style="--d:.15s">
+      <div class="mform__top">
+        <h3 class="hform__title">Ihre Nachricht</h3>
+        <p class="mform__count" aria-live="polite">Schritt <span data-step-now>1</span> von 3</p>
       </div>
-      <div class="frow">
-        <div class="ff"><label for="m3">E-Mail *</label><input id="m3" type="email" autocomplete="email" required><p class="err">Bitte geben Sie eine E-Mail-Adresse ein.</p></div>
-        <div class="ff"><label for="s3">Rechtsgebiet</label><div class="sel"><select id="s3"><option value="">Bitte wählen</option><option>Arbeitsrecht</option><option>Familienrecht</option><option>Erbrecht</option><option>Immobilienrecht</option><option>Strafrecht</option><option>Mediation</option><option>Etwas anderes</option></select></div></div>
+      <ol class="msteps" aria-hidden="true">
+        <li class="is-current"><span>1</span>Thema</li>
+        <li><span>2</span>Anliegen</li>
+        <li><span>3</span>Kontakt</li>
+      </ol>
+
+      <!-- Schritt 1 -->
+      <fieldset class="mstep is-active" data-step="1">
+        <legend class="mstep__q">Worum geht es?</legend>
+        <div class="pick pick--grid">
+          <label><input type="radio" name="topic" value="Arbeitsrecht"><span><svg><use href="#i-brief"/></svg>Arbeitsrecht</span></label>
+          <label><input type="radio" name="topic" value="Familienrecht"><span><svg><use href="#i-family"/></svg>Familienrecht</span></label>
+          <label><input type="radio" name="topic" value="Erbrecht"><span><svg><use href="#i-scroll"/></svg>Erbrecht</span></label>
+          <label><input type="radio" name="topic" value="Immobilienrecht"><span><svg><use href="#i-house"/></svg>Immobilienrecht</span></label>
+          <label><input type="radio" name="topic" value="Strafrecht"><span><svg><use href="#i-scale"/></svg>Strafrecht</span></label>
+          <label><input type="radio" name="topic" value="Mediation"><span><svg><use href="#i-hands"/></svg>Mediation</span></label>
+          <label class="pick__wide"><input type="radio" name="topic" value="Etwas anderes"><span><svg><use href="#i-spark"/></svg>Etwas anderes / Ich bin unsicher</span></label>
+        </div>
+        <p class="field__error mstep__error" id="e-topic">Bitte wählen Sie ein Thema aus.</p>
+      </fieldset>
+
+      <!-- Schritt 2 -->
+      <fieldset class="mstep" data-step="2">
+        <legend class="mstep__q">Was ist passiert?</legend>
+        <div class="field">
+          <label for="f-msg">Beschreiben Sie Ihr Anliegen in eigenen Worten</label>
+          <textarea id="f-msg" name="message" rows="6" placeholder="Zum Beispiel: Ich habe am … eine Kündigung erhalten."></textarea>
+          <p class="field__hint">Stichpunkte genügen. Wichtige Daten wie Fristen gern mit angeben.</p>
+          <p class="field__error" id="e-msg">Bitte beschreiben Sie kurz Ihr Anliegen.</p>
+        </div>
+        <p class="mnote"><svg><use href="#i-alert"/></svg> Läuft eine Frist? Bitte rufen Sie uns zusätzlich an: <a href="tel:+4939173746100">0391 737 461 00</a></p>
+      </fieldset>
+
+      <!-- Schritt 3 -->
+      <fieldset class="mstep" data-step="3">
+        <legend class="mstep__q">Wie erreichen wir Sie?</legend>
+        <div class="hform__row">
+          <div class="field">
+            <label for="f-name">Ihr Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name">
+            <p class="field__error" id="e-name">Bitte geben Sie Ihren Namen ein.</p>
+          </div>
+          <div class="field">
+            <label for="f-tel">Telefon <span class="optional">(freiwillig)</span></label>
+            <input id="f-tel" name="phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-mail">Ihre E-Mail-Adresse</label>
+          <input id="f-mail" name="email" type="email" autocomplete="email">
+          <p class="field__error" id="e-mail">Bitte geben Sie eine E-Mail-Adresse ein, z. B. name@beispiel.de.</p>
+        </div>
+        <div class="chips-field">
+          <p class="chips-field__label" id="reply-label">Wie dürfen wir uns melden?</p>
+          <div class="pick pick--two" role="radiogroup" aria-labelledby="reply-label">
+            <label><input type="radio" name="reply" value="Rückruf" checked><span><svg><use href="#i-phone"/></svg> Rückruf</span></label>
+            <label><input type="radio" name="reply" value="E-Mail"><span><svg><use href="#i-mail"/></svg> E-Mail</span></label>
+          </div>
+        </div>
+        <div class="field field--check">
+          <input id="f-ok" name="consent" type="checkbox">
+          <label for="f-ok">Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Mehr in der <a href="https://kanzlei-wulf.de/datenschutz/">Datenschutzerklärung</a>.</label>
+          <p class="field__error" id="e-ok">Bitte bestätigen Sie Ihr Einverständnis.</p>
+        </div>
+      </fieldset>
+
+      <div class="mnav">
+        <button class="btn btn--line mnav__back" type="button" hidden><svg class="ico ico--flip"><use href="#i-arrow"/></svg> Zurück</button>
+        <button class="btn mnav__next" type="button">Weiter <svg class="ico"><use href="#i-arrow"/></svg></button>
+        <button class="btn btn--send mnav__send" type="submit" hidden><span class="btn__label">Anfrage senden</span><svg class="ico"><use href="#i-send"/></svg></button>
       </div>
-      <div class="ff"><label for="x3">Ihr Anliegen *</label><textarea id="x3" rows="5" required placeholder="Beschreiben Sie kurz, worum es geht, und nennen Sie bekannte Fristen."></textarea><p class="err">Bitte beschreiben Sie kurz Ihr Anliegen.</p></div>
-      <div class="fchk"><input id="c3" type="checkbox" required><label for="c3">Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. <a href="https://kanzlei-wulf.de/datenschutz/">Datenschutz</a></label><p class="err">Bitte bestätigen Sie Ihr Einverständnis.</p></div>
-      <button class="btn btn--red btn--lg btn--full" type="submit"><span class="lbl">Anfrage senden</span><svg><use href="#i-arrow"/></svg></button>
-      <div class="done" hidden role="status" aria-live="polite"><span class="done__ico"><svg><use href="#i-check"/></svg></span><h3>Vielen Dank!</h3><p>Ihre Anfrage ist eingegangen. Wir melden uns so bald wie möglich.</p></div>
+
+      <div class="form__done" role="status" aria-live="polite" hidden>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".25"/><path d="M15 27l7 7 15-15" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Anfrage gesendet</h3>
+        <p>Vielen Dank. Wir melden uns so bald wie möglich bei Ihnen.</p>
+      </div>
     </form>
   </div>
 </section>
@@ -345,6 +408,6 @@
 <a class="totop" href="#" aria-label="Nach oben"><svg class="totop__ring" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22"/></svg><svg class="totop__ico"><use href="#i-up"/></svg></a>
 <div class="mcall"><a href="tel:+4939173746100"><svg><use href="#i-phone"/></svg>Magdeburg</a><a href="tel:+4939312527222"><svg><use href="#i-phone"/></svg>Stendal</a></div>
 
-<script src="v3.js?v=1"></script>
+<script src="v3.js?v=2"></script>
 </body>
 </html>
