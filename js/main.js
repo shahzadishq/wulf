@@ -294,6 +294,23 @@
     };
     vd.addEventListener('scroll', function () { requestAnimationFrame(upd); }, { passive: true });
     window.addEventListener('resize', upd); upd();
+    /* Mausrad: jede Raddrehung blättert genau einen Anwalt weiter.
+       Am ersten bzw. letzten Anwalt scrollt die Seite normal weiter. */
+    var wheelLock = false, acc = 0;
+    vd.addEventListener('wheel', function (e) {
+      if (e.ctrlKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      var max = vd.scrollWidth - vd.clientWidth;
+      var dir = e.deltaY > 0 ? 1 : -1;
+      if ((dir < 0 && vd.scrollLeft <= 2) || (dir > 0 && vd.scrollLeft >= max - 2)) { acc = 0; return; }
+      e.preventDefault();
+      if (wheelLock) return;
+      acc += e.deltaY;
+      if (Math.abs(acc) < 30) return;
+      acc = 0; wheelLock = true;
+      step(dir);
+      setTimeout(function () { wheelLock = false; }, reduce ? 150 : 520);
+    }, { passive: false });
+
     vd.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
       if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
