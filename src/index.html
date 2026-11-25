@@ -170,17 +170,17 @@
         <div class="contact-home__info">
           <p class="kicker reveal">Kontakt</p>
           <h2 class="reveal" style="--d:.1s">Sprechen Sie mit uns.</h2>
-          <p class="lead reveal" style="--d:.15s">Rufen Sie an oder schreiben Sie uns. Die erste Anfrage ist unverbindlich.</p>
+          <p class="reveal" style="--d:.15s">Rufen Sie an oder schreiben Sie uns – die erste Anfrage ist unverbindlich.</p>
           <p class="status status--light reveal" style="--d:.2s" data-status><span class="status__dot"></span><span class="status__text">Montag bis Freitag, 8 bis 20 Uhr erreichbar</span></p>
 
           <ul class="cinfo">
             <li class="reveal" style="--d:.2s">
               <span class="cinfo__ico"><svg><use href="#i-phone"/></svg></span>
-              <div><span class="cinfo__label">Kanzlei Magdeburg</span><a class="cinfo__value" href="tel:+4939173746100">0391 737 461 00</a><span class="cinfo__sub">Breiter Weg 31, 39104 Magdeburg</span></div>
+              <div><span class="cinfo__label">Magdeburg</span><a class="cinfo__value" href="tel:+4939173746100">0391 737 461 00</a><a class="cinfo__sub" href="https://www.google.com/maps/search/?api=1&amp;query=Breiter+Weg+31+39104+Magdeburg">Breiter Weg 31</a></div>
             </li>
             <li class="reveal" style="--d:.25s">
               <span class="cinfo__ico"><svg><use href="#i-phone"/></svg></span>
-              <div><span class="cinfo__label">Kanzlei Stendal</span><a class="cinfo__value" href="tel:+4939312527222">03931 252 72 22</a><span class="cinfo__sub">Breite Straße 54, 39576 Stendal</span></div>
+              <div><span class="cinfo__label">Stendal</span><a class="cinfo__value" href="tel:+4939312527222">03931 252 72 22</a><a class="cinfo__sub" href="https://www.google.com/maps/search/?api=1&amp;query=Breite+Stra%C3%9Fe+54+39576+Stendal">Breite Straße 54</a></div>
             </li>
             <li class="reveal" style="--d:.3s">
               <span class="cinfo__ico"><svg><use href="#i-mail"/></svg></span>
@@ -188,75 +188,59 @@
             </li>
             <li class="reveal" style="--d:.35s">
               <span class="cinfo__ico"><svg><use href="#i-clock"/></svg></span>
-              <div><span class="cinfo__label">Erreichbarkeit</span><span class="cinfo__value cinfo__value--text">Mo–Fr, 8 bis 20 Uhr</span><span class="cinfo__sub">Persönlich nach Terminvereinbarung</span></div>
-            </li>
-            <li class="reveal" style="--d:.4s">
-              <span class="cinfo__ico"><svg><use href="#i-video"/></svg></span>
-              <div><span class="cinfo__label">Von zu Hause</span><span class="cinfo__value cinfo__value--text">Telefon oder Video</span><span class="cinfo__sub">Unterlagen sicher über die <a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></span></div>
+              <div><span class="cinfo__label">Erreichbarkeit</span><span class="cinfo__value">Mo–Fr, 8–20 Uhr</span></div>
             </li>
           </ul>
-
-          <div class="routes reveal" style="--d:.45s">
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Breiter+Weg+31+39104+Magdeburg"><svg><use href="#i-pin"/></svg> Route nach Magdeburg</a>
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Breite+Stra%C3%9Fe+54+39576+Stendal"><svg><use href="#i-pin"/></svg> Route nach Stendal</a>
-          </div>
+          <p class="cinfo__extra reveal" style="--d:.4s"><svg><use href="#i-video"/></svg> Beratung auch am Telefon oder per Video.</p>
+          <p class="cinfo__extra cinfo__extra--alert reveal" style="--d:.45s"><svg><use href="#i-alert"/></svg> Läuft eine Frist? Bitte rufen Sie uns zusätzlich an.</p>
         </div>
 
         <form class="hform reveal" id="form" novalidate style="--d:.15s">
-          <div class="hform__head">
-            <h3>Ihre Nachricht an uns</h3>
-            <p>Unverbindlich und vertraulich.</p>
-          </div>
-
-          <fieldset class="chips-field">
-            <legend>Worum geht es?</legend>
-            <div class="pick">
-              <label><input type="radio" name="topic" value="Arbeitsrecht"><span>Arbeitsrecht</span></label>
-              <label><input type="radio" name="topic" value="Familienrecht"><span>Familienrecht</span></label>
-              <label><input type="radio" name="topic" value="Erbrecht"><span>Erbrecht</span></label>
-              <label><input type="radio" name="topic" value="Immobilienrecht"><span>Immobilienrecht</span></label>
-              <label><input type="radio" name="topic" value="Strafrecht"><span>Strafrecht</span></label>
-              <label><input type="radio" name="topic" value="Sonstiges"><span>Etwas anderes</span></label>
-            </div>
-          </fieldset>
-
+          <h3 class="hform__title">Ihre Nachricht</h3>
           <div class="hform__row">
             <div class="field">
-              <label for="f-name">Ihr Name</label>
+              <label for="f-name">Name</label>
               <input id="f-name" name="name" type="text" autocomplete="name" required>
               <p class="field__error" id="e-name">Bitte geben Sie Ihren Namen ein.</p>
             </div>
             <div class="field">
-              <label for="f-tel">Telefon <span class="optional">(freiwillig)</span></label>
-              <input id="f-tel" name="phone" type="tel" autocomplete="tel">
+              <label for="f-mail">E-Mail</label>
+              <input id="f-mail" name="email" type="email" autocomplete="email" required>
+              <p class="field__error" id="e-mail">Bitte geben Sie eine gültige E-Mail-Adresse ein.</p>
             </div>
           </div>
-          <div class="field">
-            <label for="f-mail">Ihre E-Mail-Adresse</label>
-            <input id="f-mail" name="email" type="email" autocomplete="email" required>
-            <p class="field__error" id="e-mail">Bitte geben Sie eine E-Mail-Adresse ein, z. B. name@beispiel.de.</p>
+          <div class="hform__row">
+            <div class="field">
+              <label for="f-tel">Telefon <span class="optional">(für Rückruf)</span></label>
+              <input id="f-tel" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="f-topic">Rechtsgebiet</label>
+              <div class="select">
+                <select id="f-topic" name="topic">
+                  <option value="">Bitte wählen</option>
+                  <option>Arbeitsrecht</option>
+                  <option>Familienrecht</option>
+                  <option>Erbrecht</option>
+                  <option>Immobilienrecht</option>
+                  <option>Strafrecht</option>
+                  <option>Mediation</option>
+                  <option>Etwas anderes</option>
+                </select>
+              </div>
+            </div>
           </div>
           <div class="field">
             <label for="f-msg">Ihr Anliegen</label>
-            <textarea id="f-msg" name="message" rows="5" required placeholder="Beschreiben Sie kurz, worum es geht."></textarea>
+            <textarea id="f-msg" name="message" rows="3" required placeholder="Beschreiben Sie kurz, worum es geht."></textarea>
             <p class="field__error" id="e-msg">Bitte beschreiben Sie kurz Ihr Anliegen.</p>
           </div>
-
-          <fieldset class="chips-field">
-            <legend>Wie dürfen wir uns melden?</legend>
-            <div class="pick pick--two">
-              <label><input type="radio" name="reply" value="Rückruf" checked><span><svg><use href="#i-phone"/></svg> Rückruf</span></label>
-              <label><input type="radio" name="reply" value="E-Mail"><span><svg><use href="#i-mail"/></svg> E-Mail</span></label>
-            </div>
-          </fieldset>
-
           <div class="field field--check">
             <input id="f-ok" name="consent" type="checkbox" required>
-            <label for="f-ok">Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Mehr in der <a href="https://kanzlei-wulf.de/datenschutz/">Datenschutzerklärung</a>.</label>
+            <label for="f-ok">Ich bin mit der Speicherung meiner Angaben zur Bearbeitung einverstanden. <a href="https://kanzlei-wulf.de/datenschutz/">Datenschutz</a></label>
             <p class="field__error" id="e-ok">Bitte bestätigen Sie Ihr Einverständnis.</p>
           </div>
           <button class="btn btn--block btn--send" type="submit"><span class="btn__label">Anfrage senden</span><svg class="ico"><use href="#i-send"/></svg></button>
-          <p class="hform__deadline"><svg><use href="#i-alert"/></svg> Läuft eine Frist? Bitte rufen Sie uns zusätzlich an.</p>
 
           <div class="form__done" role="status" aria-live="polite" hidden>
             <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".25"/><path d="M15 27l7 7 15-15" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
