@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=202611251117">
+  <link rel="stylesheet" href="css/styles.css?v=202611251126">
   <script>document.documentElement.classList.add('js');try{var s=localStorage.getItem('wulf-size');if(s)document.documentElement.setAttribute('data-size',s)}catch(e){}</script>
 </head>
 <body>
@@ -24,7 +24,16 @@
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
   <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.01"/></g></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 12.5h18M11 12v2h2v-2"/></g></symbol>
+  <symbol id="i-family" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="6" r="2.5"/><circle cx="16" cy="6" r="2.5"/><circle cx="12" cy="13" r="1.8"/><path d="M3.5 20v-4.5A4.5 4.5 0 0 1 8 11M20.5 20v-4.5A4.5 4.5 0 0 0 16 11M9.5 20v-1.5a2.5 2.5 0 0 1 5 0V20"/></g></symbol>
+  <symbol id="i-scroll" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h11a2 2 0 0 1 2 2v1h-4M7 3a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h9a2 2 0 0 0 2-2V6M7 3a2 2 0 0 1 2 2v1"/><path d="M9 10h6M9 13.5h6M9 17h3.5"/></g></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 11 12 4l9 7M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></g></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v17M7 20h10M5 6h14M12 6"/><path d="m5 6-3 7a3 3 0 0 0 6 0zM19 6l-3 7a3 3 0 0 0 6 0z"/></g></symbol>
+  <symbol id="i-hands" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1.4 1.4 0 0 0 2-2M13.5 14.5 16 17a1.4 1.4 0 0 0 2-2l-3.9-3.9a2 2 0 0 0-2.8 0l-.9.9a1.4 1.4 0 0 1-2-2L10.9 7.5a3 3 0 0 1 3.8-.3l.6.4a2 2 0 0 0 1.6.3L19 7.5"/><path d="M21 6.5 22 15h-2.5M3 6.5 2 15l6.5 6a1.4 1.4 0 0 0 2-2M2 7.5h2.6a2 2 0 0 0 1.5-.6L8 5"/></g></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c.6 4.6 2.4 7.4 7 8-4.6.6-6.4 3.4-7 8-.6-4.6-2.4-7.4-7-8 4.6-.6 6.4-3.4 7-8z"/></symbol>
 </svg>
+  <div class="progress" aria-hidden="true"></div>
   <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
   <div class="topbar">
@@ -59,42 +68,51 @@
           <li><a href="kontakt.html">Kontakt</a></li>
           <li><a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></li>
         </ul>
-        <a class="btn btn--sm" href="kontakt.html#formular">Anliegen schildern</a>
+        <a class="btn btn--sm" href="#kontakt">Anliegen schildern</a>
       </nav>
     </div>
   </header>
 
-  <main id="inhalt">    <!-- HERO -->
-    <section class="hero" id="hero">
+  <main id="inhalt">    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero" data-spot>
+      <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="hero__grain" aria-hidden="true"></div>
       <div class="wrap hero__grid">
         <div class="hero__text">
-          <p class="kicker hero__fade" style="--d:.1s">Rechtsanwälte in Magdeburg und Stendal</p>
+          <p class="status hero__fade" style="--d:.05s" data-status><span class="status__dot"></span><span class="status__text">Montag bis Freitag, 8 bis 20 Uhr erreichbar</span></p>
           <h1>
             <span class="line"><span style="--d:.2s">Klar beraten.</span></span>
-            <span class="line"><span style="--d:.35s"><em>Vorausschauend</em></span></span>
+            <span class="line"><span style="--d:.35s"><em class="swash">Vorausschauend<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 60 4, 140 4, 200 10 S 280 16, 297 6"/></svg></em></span></span>
             <span class="line"><span style="--d:.5s">begleitet.</span></span>
           </h1>
-          <p class="lead hero__fade" style="--d:.75s">Wir beraten Privatpersonen, Unternehmen und Freiberufler – persönlich in unseren Kanzleien, am Telefon oder per Video.</p>
+          <p class="lead hero__fade" style="--d:.75s">Ihre Rechtsanwälte in Magdeburg und Stendal – persönlich in der Kanzlei, am Telefon oder per Video.</p>
           <div class="hero__actions hero__fade" style="--d:.9s">
-            <a class="btn" href="kontakt.html#formular">Anliegen schildern <svg class="ico"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--glow" href="#kontakt">Anliegen schildern <svg class="ico"><use href="#i-arrow"/></svg></a>
             <a class="btn btn--line-light" href="tel:+4939173746100"><svg class="ico"><use href="#i-phone"/></svg> 0391 737 461 00</a>
           </div>
-          <a class="rating hero__fade" style="--d:1.05s" href="#vertrauen">
-            <span class="rating__stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-            <span><strong>4,88 von 5</strong> aus 1.308 Bewertungen</span>
-          </a>
+          <ul class="hero__trust hero__fade" style="--d:1.05s">
+            <li><svg><use href="#i-spark"/></svg> Fachanwälte für Arbeits-, Familien-, Miet- und Strafrecht</li>
+            <li><svg><use href="#i-spark"/></svg> Arbeitgeber bundesweit betreut</li>
+          </ul>
         </div>
-        <div class="hero__visual" aria-hidden="true">
-          <div class="hero__photo"><img src="https://kanzlei-wulf.de/wp-content/uploads/2026/09/Header-RA-Team_01-2024-1600.webp" alt="" fetchpriority="high" onerror="this.remove()"></div>
-          <div class="hero__badge hero__fade" style="--d:1.3s">
-            <strong>Sechs Anwälte, zwei Kanzleien</strong>
-            <p>Für Arbeitgeber bundesweit im Einsatz.</p>
+
+        <div class="hero__visual">
+          <div class="hero__photo"><img src="https://kanzlei-wulf.de/wp-content/uploads/2026/09/Header-RA-Team_01-2024-1600.webp" alt="Das Anwaltsteam von Wulf &amp; Collegen" fetchpriority="high" onerror="this.remove()"></div>
+          <a class="glass glass--rating hero__fade" style="--d:1.25s" href="#vertrauen">
+            <span class="glass__stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+            <strong>4,88 von 5</strong>
+            <span>aus 1.308 Bewertungen bei ProvenExpert</span>
+          </a>
+          <div class="glass glass--places hero__fade" style="--d:1.45s">
+            <svg><use href="#i-pin"/></svg>
+            <span><strong>Magdeburg</strong> und <strong>Stendal</strong></span>
           </div>
         </div>
       </div>
+      <a class="hero__scroll hero__fade" style="--d:1.6s" href="#vertrauen" aria-label="Weiter nach unten"><span></span></a>
     </section>
 
-    <!-- KENNZAHLEN -->
+    <!-- ===================== KENNZAHLEN ===================== -->
     <section class="stats" id="vertrauen" aria-label="Bewertungen unserer Mandanten">
       <div class="wrap">
         <div class="stats__card reveal">
@@ -106,64 +124,93 @@
       </div>
     </section>
 
-    <!-- INTRO -->
-    <section class="section">
-      <div class="wrap intro">
-        <figure class="intro__frame reveal" data-inview>
-          <img loading="lazy" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-12_3840x2160-scaled.jpg" alt="Rechtsanwalt Sandro Wulf in der Kanzlei" onerror="this.remove()">
-          <figcaption><strong>Sandro Wulf</strong>Fachanwalt für Arbeitsrecht, seit 1997 als Rechtsanwalt zugelassen</figcaption>
-        </figure>
-        <div>
-          <p class="kicker reveal">Unsere Kanzlei</p>
-          <h2 class="reveal" style="--d:.1s">Rechtsberatung ist Vertrauenssache.</h2>
-          <p class="lead reveal" style="--d:.2s">Wir nehmen uns Zeit für Ihr Anliegen, erklären verständlich und sagen Ihnen offen, was es kostet. Sie entscheiden, wie es weitergeht.</p>
-          <ul class="ways">
-            <li class="reveal" style="--d:.25s"><span class="ways__ico"><svg><use href="#i-office"/></svg></span><div><strong>Persönlich in der Kanzlei</strong><span>In Magdeburg und Stendal, nach Terminvereinbarung.</span></div></li>
-            <li class="reveal" style="--d:.35s"><span class="ways__ico"><svg><use href="#i-phone"/></svg></span><div><strong>Am Telefon</strong><span>Montag bis Freitag von 8 bis 20 Uhr.</span></div></li>
-            <li class="reveal" style="--d:.45s"><span class="ways__ico"><svg><use href="#i-video"/></svg></span><div><strong>Per Video</strong><span>Bequem von zu Hause, ohne Anfahrt.</span></div></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- FACHBEREICHE -->
-    <section class="section section--white" id="fachbereiche">
+    <!-- ===================== FACHBEREICHE (Bento) ===================== -->
+    <section class="section" id="fachbereiche">
       <div class="wrap">
         <div class="section__head">
-          <div><p class="kicker reveal">Fachbereiche</p><h2 class="reveal" style="--d:.1s">Unsere Schwerpunkte</h2></div>
-          <p class="reveal" style="--d:.2s">Wählen Sie das Rechtsgebiet, das Ihr Anliegen betrifft. Wenn Sie unsicher sind, rufen Sie einfach an – wir sagen Ihnen, wer Ihnen weiterhilft.</p>
+          <div><p class="kicker reveal">Fachbereiche</p><h2 class="reveal" style="--d:.1s">Wobei dürfen wir Ihnen helfen?</h2></div>
+          <p class="reveal" style="--d:.2s">Wählen Sie Ihr Rechtsgebiet. Wenn Sie unsicher sind, rufen Sie einfach an – wir sagen Ihnen, wer Ihnen weiterhilft.</p>
         </div>
-        <ul class="practice">
-          <li class="practice__row reveal"><a class="practice__link" href="fachbereiche.html#arbeitsrecht"><span class="practice__name">Arbeitsrecht</span><span class="practice__desc">Für Arbeitnehmer und Arbeitgeber: Kündigung, Abfindung, Arbeitsverträge.</span><span class="practice__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li class="practice__row reveal" style="--d:.05s"><a class="practice__link" href="fachbereiche.html#familienrecht"><span class="practice__name">Familienrecht</span><span class="practice__desc">Trennung und Scheidung, Unterhalt, Sorgerecht.</span><span class="practice__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li class="practice__row reveal" style="--d:.1s"><a class="practice__link" href="fachbereiche.html#erbrecht"><span class="practice__name">Erbrecht</span><span class="practice__desc">Testament gestalten, Erbschein beantragen, Pflichtteil durchsetzen.</span><span class="practice__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li class="practice__row reveal" style="--d:.15s"><a class="practice__link" href="fachbereiche.html#immobilienrecht"><span class="practice__name">Immobilienrecht</span><span class="practice__desc">Kauf und Verkauf, Mietstreit, Wohnungseigentum.</span><span class="practice__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li class="practice__row reveal" style="--d:.2s"><a class="practice__link" href="fachbereiche.html#strafrecht"><span class="practice__name">Strafrecht</span><span class="practice__desc">Verteidigung vom Ermittlungsverfahren bis vor Gericht.</span><span class="practice__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li class="practice__row reveal" style="--d:.25s"><a class="practice__link" href="fachbereiche.html#mediation"><span class="practice__name">Mediation</span><span class="practice__desc">Konflikte außergerichtlich und einvernehmlich lösen.</span><span class="practice__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-        </ul>
-        <p class="practice__more reveal">Außerdem beraten wir im Bußgeld-, Vertrags-, IT- und Sportrecht. <a href="fachbereiche.html">Alle Rechtsgebiete ansehen</a></p>
+
+        <div class="bento">
+          <article class="tile tile--hero reveal" data-spot>
+            <span class="tile__ico"><svg><use href="#i-brief"/></svg></span>
+            <h3>Arbeitsrecht</h3>
+            <p>Kündigung erhalten? Abfindung verhandeln? Arbeitsvertrag prüfen lassen? Wir vertreten Arbeitnehmer und Arbeitgeber – Arbeitgeber auch bundesweit.</p>
+            <div class="tile__pills">
+              <a href="fachbereiche.html#arbeitsrecht">Für Arbeitnehmer</a>
+              <a href="fachbereiche.html#arbeitsrecht">Für Arbeitgeber</a>
+            </div>
+            <p class="tile__note"><svg><use href="#i-alert"/></svg> Nach einer Kündigung bleiben nur drei Wochen für die Klage.</p>
+          </article>
+          <a class="tile reveal" style="--d:.05s" href="fachbereiche.html#familienrecht" data-spot>
+            <span class="tile__ico"><svg><use href="#i-family"/></svg></span>
+            <h3>Familienrecht</h3>
+            <p>Trennung, Scheidung, Unterhalt und Sorgerecht.</p>
+            <span class="tile__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="tile reveal" style="--d:.1s" href="fachbereiche.html#erbrecht" data-spot>
+            <span class="tile__ico"><svg><use href="#i-scroll"/></svg></span>
+            <h3>Erbrecht</h3>
+            <p>Testament, Erbschein und Pflichtteil.</p>
+            <span class="tile__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="tile reveal" style="--d:.15s" href="fachbereiche.html#immobilienrecht" data-spot>
+            <span class="tile__ico"><svg><use href="#i-house"/></svg></span>
+            <h3>Immobilienrecht</h3>
+            <p>Kauf, Verkauf und Mietstreit.</p>
+            <span class="tile__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="tile reveal" style="--d:.2s" href="fachbereiche.html#strafrecht" data-spot>
+            <span class="tile__ico"><svg><use href="#i-scale"/></svg></span>
+            <h3>Strafrecht</h3>
+            <p>Verteidigung bis vor Gericht.</p>
+            <span class="tile__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="tile tile--wide reveal" style="--d:.1s" href="fachbereiche.html#mediation" data-spot>
+            <span class="tile__ico"><svg><use href="#i-hands"/></svg></span>
+            <div>
+              <h3>Mediation</h3>
+              <p>Konflikte ohne Gericht lösen – einvernehmlich und mit neutraler Vermittlung.</p>
+            </div>
+            <span class="tile__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="tile tile--more reveal" style="--d:.15s" href="fachbereiche.html#weitere" data-spot>
+            <h3>Außerdem</h3>
+            <p>Bußgeld-, Vertrags-, IT- und Sportrecht</p>
+            <span class="tile__link">Alle Rechtsgebiete <svg><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- ABLAUF -->
+    <!-- ===================== LAUFBAND ===================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Arbeitsrecht</span><svg><use href="#i-spark"/></svg><span>Familienrecht</span><svg><use href="#i-spark"/></svg><span>Erbrecht</span><svg><use href="#i-spark"/></svg><span>Immobilienrecht</span><svg><use href="#i-spark"/></svg><span>Strafrecht</span><svg><use href="#i-spark"/></svg><span>Mediation</span><svg><use href="#i-spark"/></svg>
+        <span>Arbeitsrecht</span><svg><use href="#i-spark"/></svg><span>Familienrecht</span><svg><use href="#i-spark"/></svg><span>Erbrecht</span><svg><use href="#i-spark"/></svg><span>Immobilienrecht</span><svg><use href="#i-spark"/></svg><span>Strafrecht</span><svg><use href="#i-spark"/></svg><span>Mediation</span><svg><use href="#i-spark"/></svg>
+      </div>
+    </div>
+
+    <!-- ===================== ABLAUF ===================== -->
     <section class="section dark">
       <div class="wrap">
         <div class="section__head">
-          <div><p class="kicker reveal">Unser Vorgehen</p><h2 class="reveal" style="--d:.1s">So gehen wir Ihr Anliegen an</h2></div>
+          <div><p class="kicker reveal">Unser Vorgehen</p><h2 class="reveal" style="--d:.1s">In drei Schritten zu Ihrer Lösung</h2></div>
           <p class="reveal" style="--d:.2s">Sie wissen bei jedem Schritt, woran Sie sind – auch, was es kostet.</p>
         </div>
         <div class="process" data-inview>
           <span class="process__track" aria-hidden="true"><span></span></span>
           <ol class="process__list">
-          <li class="reveal" style="--d:.2s"><h3>Ihr Anliegen verstehen</h3><p>Wir klären den Sachverhalt und fragen, was Sie erreichen möchten.</p></li>
-          <li class="reveal" style="--d:.5s"><h3>Möglichkeiten erläutern</h3><p>Sie erfahren Ihre Handlungsmöglichkeiten mit Risiken und Kosten – in verständlichen Worten.</p></li>
-          <li class="reveal" style="--d:.8s"><h3>Das Vorgehen abstimmen</h3><p>Den weiteren Weg legen wir gemeinsam mit Ihnen fest und setzen ihn konsequent um.</p></li>
+            <li class="reveal" style="--d:.2s"><h3>Ihr Anliegen verstehen</h3><p>Wir klären den Sachverhalt und fragen, was Sie erreichen möchten.</p></li>
+            <li class="reveal" style="--d:.5s"><h3>Möglichkeiten erläutern</h3><p>Sie erfahren Ihre Handlungsmöglichkeiten mit Risiken und Kosten – in verständlichen Worten.</p></li>
+            <li class="reveal" style="--d:.8s"><h3>Das Vorgehen abstimmen</h3><p>Den weiteren Weg legen wir gemeinsam mit Ihnen fest und setzen ihn konsequent um.</p></li>
           </ol>
         </div>
       </div>
     </section>
 
-    <!-- TEAM -->
+    <!-- ===================== TEAM ===================== -->
     <section class="section" id="anwaelte">
       <div class="wrap">
         <div class="section__head">
@@ -171,77 +218,126 @@
           <p class="reveal" style="--d:.2s">Sechs Rechtsanwälte mit langjähriger Erfahrung. <a href="anwaelte.html">Alle Profile ansehen</a></p>
         </div>
         <ul class="team">
-          <li class="member reveal"><a href="anwaelte.html#sandro-wulf"><div class="member__photo" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-12_3840x2160-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Sandro Wulf</h3><p>Fachanwalt für Arbeitsrecht, Mediator</p></a></li>
-          <li class="member reveal" style="--d:.1s"><a href="anwaelte.html#hendrik-lippmann"><div class="member__photo" data-initials="HL"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-16-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Hendrik Lippmann</h3><p>Partner, Fachanwalt für Familienrecht</p></a></li>
-          <li class="member reveal" style="--d:.2s"><a href="anwaelte.html#jan-steinmetz"><div class="member__photo" data-initials="JS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-7-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Jan Steinmetz</h3><p>Fachanwalt für Miet- und Wohnungseigentumsrecht und für Arbeitsrecht</p></a></li>
-          <li class="member reveal"><a href="anwaelte.html#lars-haenig"><div class="member__photo" data-initials="LH"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-15_3840x2160-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Lars Hänig</h3><p>Arbeitsrecht, IT-Recht und Online-Handel</p></a></li>
-          <li class="member reveal" style="--d:.1s"><a href="anwaelte.html#maximilian-scholze"><div class="member__photo" data-initials="MS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/04/Wulf-und-Collegen_Mitarbeiterportraits-9-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Maximilian Scholze</h3><p>Fachanwalt für Strafrecht</p></a></li>
-          <li class="member reveal" style="--d:.2s"><a href="anwaelte.html#sebastian-weise"><div class="member__photo" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2025/03/Herr_Weise_Hintergrund-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Sebastian Weise</h3><p>Rechtsanwalt, Familienrecht</p></a></li>
+          <li class="member reveal"><a href="anwaelte.html#sandro-wulf" data-tilt><div class="member__photo" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-12_3840x2160-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Sandro Wulf</h3><p>Fachanwalt für Arbeitsrecht, Mediator</p></a></li>
+          <li class="member reveal" style="--d:.1s"><a href="anwaelte.html#hendrik-lippmann" data-tilt><div class="member__photo" data-initials="HL"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-16-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Hendrik Lippmann</h3><p>Partner, Fachanwalt für Familienrecht</p></a></li>
+          <li class="member reveal" style="--d:.2s"><a href="anwaelte.html#jan-steinmetz" data-tilt><div class="member__photo" data-initials="JS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-7-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Jan Steinmetz</h3><p>Fachanwalt für Miet- und Wohnungseigentumsrecht und für Arbeitsrecht</p></a></li>
+          <li class="member reveal"><a href="anwaelte.html#lars-haenig" data-tilt><div class="member__photo" data-initials="LH"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-15_3840x2160-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Lars Hänig</h3><p>Arbeitsrecht, IT-Recht und Online-Handel</p></a></li>
+          <li class="member reveal" style="--d:.1s"><a href="anwaelte.html#maximilian-scholze" data-tilt><div class="member__photo" data-initials="MS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/04/Wulf-und-Collegen_Mitarbeiterportraits-9-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Maximilian Scholze</h3><p>Fachanwalt für Strafrecht</p></a></li>
+          <li class="member reveal" style="--d:.2s"><a href="anwaelte.html#sebastian-weise" data-tilt><div class="member__photo" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2025/03/Herr_Weise_Hintergrund-scaled.jpg" alt=""><span class="member__more">Profil ansehen <svg><use href="#i-arrow"/></svg></span></div><h3>Sebastian Weise</h3><p>Rechtsanwalt, Familienrecht</p></a></li>
         </ul>
       </div>
     </section>
 
-    <!-- STATEMENT -->
+    <!-- ===================== STATEMENT ===================== -->
     <section class="section section--mist statement">
       <div class="wrap">
         <svg class="statement__mark reveal" viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" d="M10 34c0-9 4-16 12-20l2 3c-5 3-7 7-7 11h6v10H10zm17 0c0-9 4-16 12-20l2 3c-5 3-7 7-7 11h6v10H27z"/></svg>
-        <blockquote class="reveal" style="--d:.1s">Gute Beratung heißt: Sie verstehen Ihre Lage – und entscheiden selbst.</blockquote>
-        <p class="reveal" style="--d:.2s">Deshalb klären wir zuerst Ihre Ziele, erläutern dann Ihre Möglichkeiten mit Risiken und Kosten und stimmen das Vorgehen gemeinsam mit Ihnen ab.</p>
+        <blockquote class="reveal" style="--d:.1s">Rechtsberatung ist Vertrauenssache.</blockquote>
+        <p class="reveal" style="--d:.2s">Wir klären zuerst Ihre Ziele, erläutern dann Ihre Möglichkeiten mit Risiken und Kosten und stimmen das Vorgehen gemeinsam mit Ihnen ab.</p>
       </div>
     </section>
 
-    <!-- STANDORTE -->
-    <section class="section dark" id="standorte">
-      <div class="wrap locations">
-        <figure class="map" data-inview aria-label="Karte: Die Elbe verbindet unsere Kanzleien in Magdeburg und Stendal">
-          <svg viewBox="0 0 420 520" role="img" aria-label="Die Elbe verbindet Magdeburg und Stendal">
-            <defs><linearGradient id="rv" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#D9CCB7"/><stop offset="1" stop-color="#B9A88E"/></linearGradient></defs>
-            <g fill="none" stroke="rgba(255,255,255,.08)" stroke-width="1">
-              <path d="M-10 90 C 80 60, 160 120, 250 80 S 400 60, 440 100"/><path d="M-10 150 C 90 120, 170 180, 260 140 S 400 120, 440 160"/>
-              <path d="M-10 330 C 70 300, 150 360, 240 320 S 390 300, 440 340"/><path d="M-10 400 C 80 370, 170 430, 270 390 S 400 370, 440 410"/>
-              <path d="M-10 470 C 90 440, 180 500, 280 460 S 400 440, 440 480"/>
-            </g>
-            <path class="river-glow" d="M200 540 C 190 480, 150 450, 170 400 S 250 330, 240 280 S 180 210, 230 160 S 330 90, 300 -20" fill="none" stroke="rgba(185,168,142,.18)" stroke-width="22" stroke-linecap="round"/>
-            <path class="river" d="M200 540 C 190 480, 150 450, 170 400 S 250 330, 240 280 S 180 210, 230 160 S 330 90, 300 -20" fill="none" stroke="url(#rv)" stroke-width="4" stroke-linecap="round"/>
-            <path class="link" d="M118 410 C 140 320, 110 230, 150 150" fill="none" stroke="#D9CCB7" stroke-width="1.4" stroke-dasharray="3 7"/>
-            <g class="pin pin--sdl"><circle cx="150" cy="150" r="24" fill="rgba(217,204,183,.15)"/><circle cx="150" cy="150" r="8" fill="#D9CCB7"/><text x="118" y="112" class="pin__city" text-anchor="end">Stendal</text><text x="118" y="134" class="pin__addr" text-anchor="end">Breite Straße 54</text></g>
-            <g class="pin pin--md"><circle cx="118" cy="410" r="24" fill="rgba(217,204,183,.15)"/><circle cx="118" cy="410" r="8" fill="#D9CCB7"/><text x="86" y="460" class="pin__city" text-anchor="middle">Magdeburg</text><text x="86" y="482" class="pin__addr" text-anchor="middle">Breiter Weg 31</text></g>
-            <text x="268" y="226" class="river-label" transform="rotate(-62 268 226)">Elbe</text>
-          </svg>
-        </figure>
-        <div>
-          <p class="kicker reveal">Standorte</p>
-          <h2 class="reveal" style="--d:.1s">Zwei Kanzleien an der Elbe</h2>
-          <p class="reveal" style="--d:.15s">Persönliche Gespräche nach Terminvereinbarung. Arbeitgeber betreuen wir bundesweit.</p>
-          <div class="offices">
-            <article class="office reveal" style="--d:.2s">
-              <h3>Magdeburg</h3>
-              <address>Breiter Weg 31, 39104 Magdeburg</address>
-              <div class="office__row"><a class="office__phone" href="tel:+4939173746100"><svg><use href="#i-phone"/></svg>0391 737 461 00</a><a class="office__route" href="https://www.google.com/maps/search/?api=1&amp;query=Breiter+Weg+31+39104+Magdeburg">Route planen</a></div>
-            </article>
-            <article class="office reveal" style="--d:.3s">
-              <h3>Stendal</h3>
-              <address>Breite Straße 54, 39576 Stendal</address>
-              <div class="office__row"><a class="office__phone" href="tel:+4939312527222"><svg><use href="#i-phone"/></svg>03931 252 72 22</a><a class="office__route" href="https://www.google.com/maps/search/?api=1&amp;query=Breite+Stra%C3%9Fe+54+39576+Stendal">Route planen</a></div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- ===================== KONTAKT ===================== -->
+    <section class="section contact-home" id="kontakt">
+      <svg class="contact-home__river" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true" data-inview><path d="M-40 760 C 220 700, 300 520, 520 560 S 820 760, 1000 520 S 1240 180, 1480 240"/></svg>
+      <div class="wrap contact-home__grid">
+        <div class="contact-home__info">
+          <p class="kicker reveal">Kontakt</p>
+          <h2 class="reveal" style="--d:.1s">Sprechen Sie mit uns.</h2>
+          <p class="lead reveal" style="--d:.15s">Rufen Sie an oder schreiben Sie uns. Die erste Anfrage ist unverbindlich.</p>
+          <p class="status status--light reveal" style="--d:.2s" data-status><span class="status__dot"></span><span class="status__text">Montag bis Freitag, 8 bis 20 Uhr erreichbar</span></p>
 
-    <!-- CTA -->
-    <section class="cta">
-      <div class="wrap">
-        <div class="cta__box reveal">
-          <div>
-            <h2>Schildern Sie uns Ihr Anliegen</h2>
-            <p>Schreiben Sie uns in eigenen Worten oder rufen Sie an. Die erste Anfrage ist unverbindlich.</p>
-          </div>
-          <div class="cta__actions">
-            <a class="btn btn--light" href="kontakt.html#formular">Zum Kontaktformular</a>
-            <a class="btn btn--line-light" href="tel:+4939173746100"><svg class="ico"><use href="#i-phone"/></svg> Anrufen</a>
+          <ul class="cinfo">
+            <li class="reveal" style="--d:.2s">
+              <span class="cinfo__ico"><svg><use href="#i-phone"/></svg></span>
+              <div><span class="cinfo__label">Kanzlei Magdeburg</span><a class="cinfo__value" href="tel:+4939173746100">0391 737 461 00</a><span class="cinfo__sub">Breiter Weg 31, 39104 Magdeburg</span></div>
+            </li>
+            <li class="reveal" style="--d:.25s">
+              <span class="cinfo__ico"><svg><use href="#i-phone"/></svg></span>
+              <div><span class="cinfo__label">Kanzlei Stendal</span><a class="cinfo__value" href="tel:+4939312527222">03931 252 72 22</a><span class="cinfo__sub">Breite Straße 54, 39576 Stendal</span></div>
+            </li>
+            <li class="reveal" style="--d:.3s">
+              <span class="cinfo__ico"><svg><use href="#i-mail"/></svg></span>
+              <div><span class="cinfo__label">E-Mail</span><a class="cinfo__value" href="mailto:info@kanzlei-wulf.de">info@kanzlei-wulf.de</a></div>
+            </li>
+            <li class="reveal" style="--d:.35s">
+              <span class="cinfo__ico"><svg><use href="#i-clock"/></svg></span>
+              <div><span class="cinfo__label">Erreichbarkeit</span><span class="cinfo__value cinfo__value--text">Mo–Fr, 8 bis 20 Uhr</span><span class="cinfo__sub">Persönlich nach Terminvereinbarung</span></div>
+            </li>
+            <li class="reveal" style="--d:.4s">
+              <span class="cinfo__ico"><svg><use href="#i-video"/></svg></span>
+              <div><span class="cinfo__label">Von zu Hause</span><span class="cinfo__value cinfo__value--text">Telefon oder Video</span><span class="cinfo__sub">Unterlagen sicher über die <a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></span></div>
+            </li>
+          </ul>
+
+          <div class="routes reveal" style="--d:.45s">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Breiter+Weg+31+39104+Magdeburg"><svg><use href="#i-pin"/></svg> Route nach Magdeburg</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Breite+Stra%C3%9Fe+54+39576+Stendal"><svg><use href="#i-pin"/></svg> Route nach Stendal</a>
           </div>
         </div>
+
+        <form class="hform reveal" id="form" novalidate style="--d:.15s">
+          <div class="hform__head">
+            <h3>Ihre Nachricht an uns</h3>
+            <p>Unverbindlich und vertraulich.</p>
+          </div>
+
+          <fieldset class="chips-field">
+            <legend>Worum geht es?</legend>
+            <div class="pick">
+              <label><input type="radio" name="topic" value="Arbeitsrecht"><span>Arbeitsrecht</span></label>
+              <label><input type="radio" name="topic" value="Familienrecht"><span>Familienrecht</span></label>
+              <label><input type="radio" name="topic" value="Erbrecht"><span>Erbrecht</span></label>
+              <label><input type="radio" name="topic" value="Immobilienrecht"><span>Immobilienrecht</span></label>
+              <label><input type="radio" name="topic" value="Strafrecht"><span>Strafrecht</span></label>
+              <label><input type="radio" name="topic" value="Sonstiges"><span>Etwas anderes</span></label>
+            </div>
+          </fieldset>
+
+          <div class="hform__row">
+            <div class="field">
+              <label for="f-name">Ihr Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+              <p class="field__error" id="e-name">Bitte geben Sie Ihren Namen ein.</p>
+            </div>
+            <div class="field">
+              <label for="f-tel">Telefon <span class="optional">(freiwillig)</span></label>
+              <input id="f-tel" name="phone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-mail">Ihre E-Mail-Adresse</label>
+            <input id="f-mail" name="email" type="email" autocomplete="email" required>
+            <p class="field__error" id="e-mail">Bitte geben Sie eine E-Mail-Adresse ein, z. B. name@beispiel.de.</p>
+          </div>
+          <div class="field">
+            <label for="f-msg">Ihr Anliegen</label>
+            <textarea id="f-msg" name="message" rows="5" required placeholder="Beschreiben Sie kurz, worum es geht."></textarea>
+            <p class="field__error" id="e-msg">Bitte beschreiben Sie kurz Ihr Anliegen.</p>
+          </div>
+
+          <fieldset class="chips-field">
+            <legend>Wie dürfen wir uns melden?</legend>
+            <div class="pick pick--two">
+              <label><input type="radio" name="reply" value="Rückruf" checked><span><svg><use href="#i-phone"/></svg> Rückruf</span></label>
+              <label><input type="radio" name="reply" value="E-Mail"><span><svg><use href="#i-mail"/></svg> E-Mail</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field field--check">
+            <input id="f-ok" name="consent" type="checkbox" required>
+            <label for="f-ok">Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Mehr in der <a href="https://kanzlei-wulf.de/datenschutz/">Datenschutzerklärung</a>.</label>
+            <p class="field__error" id="e-ok">Bitte bestätigen Sie Ihr Einverständnis.</p>
+          </div>
+          <button class="btn btn--block btn--send" type="submit"><span class="btn__label">Anfrage senden</span><svg class="ico"><use href="#i-send"/></svg></button>
+          <p class="hform__deadline"><svg><use href="#i-alert"/></svg> Läuft eine Frist? Bitte rufen Sie uns zusätzlich an.</p>
+
+          <div class="form__done" role="status" aria-live="polite" hidden>
+            <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".25"/><path d="M15 27l7 7 15-15" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Anfrage gesendet</h3>
+            <p>Vielen Dank. Wir melden uns so bald wie möglich bei Ihnen.</p>
+          </div>
+        </form>
       </div>
     </section>
   </main>
@@ -285,6 +381,6 @@
     <a href="tel:+4939312527222"><span>Stendal</span><strong>Anrufen</strong></a>
   </div>
 
-  <script src="js/main.js?v=202611251117"></script>
+  <script src="js/main.js?v=202611251126"></script>
 </body>
 </html>

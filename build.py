@@ -29,6 +29,14 @@ SPRITE = """<svg width="0" height="0" style="position:absolute" aria-hidden="tru
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
   <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.01"/></g></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 12.5h18M11 12v2h2v-2"/></g></symbol>
+  <symbol id="i-family" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="6" r="2.5"/><circle cx="16" cy="6" r="2.5"/><circle cx="12" cy="13" r="1.8"/><path d="M3.5 20v-4.5A4.5 4.5 0 0 1 8 11M20.5 20v-4.5A4.5 4.5 0 0 0 16 11M9.5 20v-1.5a2.5 2.5 0 0 1 5 0V20"/></g></symbol>
+  <symbol id="i-scroll" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h11a2 2 0 0 1 2 2v1h-4M7 3a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h9a2 2 0 0 0 2-2V6M7 3a2 2 0 0 1 2 2v1"/><path d="M9 10h6M9 13.5h6M9 17h3.5"/></g></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 11 12 4l9 7M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></g></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v17M7 20h10M5 6h14M12 6"/><path d="m5 6-3 7a3 3 0 0 0 6 0zM19 6l-3 7a3 3 0 0 0 6 0z"/></g></symbol>
+  <symbol id="i-hands" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1.4 1.4 0 0 0 2-2M13.5 14.5 16 17a1.4 1.4 0 0 0 2-2l-3.9-3.9a2 2 0 0 0-2.8 0l-.9.9a1.4 1.4 0 0 1-2-2L10.9 7.5a3 3 0 0 1 3.8-.3l.6.4a2 2 0 0 0 1.6.3L19 7.5"/><path d="M21 6.5 22 15h-2.5M3 6.5 2 15l6.5 6a1.4 1.4 0 0 0 2-2M2 7.5h2.6a2 2 0 0 0 1.5-.6L8 5"/></g></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c.6 4.6 2.4 7.4 7 8-4.6.6-6.4 3.4-7 8-.6-4.6-2.4-7.4-7-8 4.6-.6 6.4-3.4 7-8z"/></symbol>
 </svg>"""
 
 HEAD = """<!DOCTYPE html>
@@ -143,6 +151,9 @@ def build():
         )
         header_class = "header--over" if meta.get("nav") == "start" else "header--page"
         page = HEAD.format(title=meta["title"], description=meta["description"], nav=nav, live=LIVE, sprite=SPRITE, header_class=header_class, ver=VERSION)
+        if meta.get("nav") == "start":
+            page = page.replace('href="kontakt.html#formular">Anliegen schildern</a>\n      </nav>', 'href="#kontakt">Anliegen schildern</a>\n      </nav>')
+            page = page.replace('<a class="skip"', '<div class="progress" aria-hidden="true"></div>\n  <a class="skip"')
         page += body.replace("{live}", LIVE) + FOOT.replace("__VER__", VERSION)
         (ROOT / src.name).write_text(page, encoding="utf-8")
         print("gebaut:", src.name)

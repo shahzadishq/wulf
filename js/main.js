@@ -96,6 +96,64 @@
     Object.keys(byId).forEach(function (id) { var s = document.getElementById(id); if (s) tocIo.observe(s); });
   }
 
+
+  /* ---------- Live-Status: Jetzt erreichbar? (Zeit in Deutschland) ---------- */
+  var statusEls = document.querySelectorAll('[data-status]');
+  if (statusEls.length) {
+    var updateStatus = function () {
+      var parts = {};
+      try {
+        new Intl.DateTimeFormat('de-DE', { timeZone: 'Europe/Berlin', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' })
+          .formatToParts(new Date()).forEach(function (p) { parts[p.type] = p.value; });
+      } catch (e) { return; }
+      var days = ['Mo.', 'Di.', 'Mi.', 'Do.', 'Fr.', 'Sa.', 'So.'];
+      var d = days.indexOf(parts.weekday), h = parseInt(parts.hour, 10);
+      if (d < 0 || isNaN(h)) return;
+      var open = d <= 4 && h >= 8 && h < 20, text;
+      if (open) text = 'Jetzt erreichbar – heute bis 20 Uhr';
+      else if (d <= 3 && h >= 20) text = 'Morgen ab 8 Uhr wieder erreichbar';
+      else if (d <= 4 && h < 8) text = 'Heute ab 8 Uhr erreichbar';
+      else text = 'Am Montag ab 8 Uhr wieder erreichbar';
+      statusEls.forEach(function (el) {
+        el.classList.toggle('is-open', open); el.classList.toggle('is-closed', !open);
+        el.querySelector('.status__text').textContent = text;
+      });
+    };
+    updateStatus(); setInterval(updateStatus, 60000);
+  }
+
+  /* ---------- Scroll-Fortschritt ---------- */
+  var bar = document.querySelector('.progress');
+  if (bar) {
+    var setBar = function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.setProperty('--p', max > 0 ? (window.scrollY / max).toFixed(4) : 0);
+    };
+    window.addEventListener('scroll', function () { requestAnimationFrame(setBar); }, { passive: true });
+    setBar();
+  }
+
+  /* ---------- Lichtkegel folgt der Maus (nur Desktop) ---------- */
+  var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (finePointer && !reduce) {
+    document.querySelectorAll('[data-spot]').forEach(function (el) {
+      el.addEventListener('pointermove', function (e) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+    /* sanfte 3D-Neigung der Teamkarten */
+    document.querySelectorAll('[data-tilt]').forEach(function (el) {
+      el.addEventListener('pointermove', function (e) {
+        var r = el.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - .5, yv = (e.clientY - r.top) / r.height - .5;
+        el.style.transform = 'perspective(900px) rotateX(' + (-yv * 5).toFixed(2) + 'deg) rotateY(' + (x * 6).toFixed(2) + 'deg)';
+      });
+      el.addEventListener('pointerleave', function () { el.style.transform = ''; });
+    });
+  }
+
   /* ---------- Formular ---------- */
   var form = document.getElementById('form');
   if (form) {
@@ -119,9 +177,14 @@
       });
       if (firstBad) { firstBad.focus(); return; }
       /* TODO: an das bestehende WordPress- oder Mail-Backend anbinden */
-      form.querySelectorAll('.field, button[type="submit"], h2').forEach(function (n) { n.hidden = true; });
-      var done = form.querySelector('.form__done');
-      done.hidden = false; done.setAttribute('tabindex', '-1'); done.focus();
+      var btn = form.querySelector('button[type="submit"]');
+      var lbl = btn.querySelector('.btn__label');
+      btn.classList.add('is-loading'); if (lbl) lbl.textContent = 'Wird gesendet …';
+      setTimeout(function () {
+        Array.prototype.forEach.call(form.children, function (n) { if (!n.classList.contains('form__done')) n.hidden = true; });
+        var done = form.querySelector('.form__done');
+        done.hidden = false; done.setAttribute('tabindex', '-1'); done.focus();
+      }, reduce ? 0 : 1100);
     });
   }
 
