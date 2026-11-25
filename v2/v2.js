@@ -61,10 +61,17 @@
   if (g2) guilloche(g2, 210, 53, 90, 53, 3);
 
   /* ---------- Seite geladen → Einstieg starten ---------- */
-  requestAnimationFrame(() => setTimeout(() => {
-    document.body.classList.add('is-loaded');
-    g1 && g1.classList.add('on');
-  }, 60));
+  let started = false;
+  const start = () => {
+    if (started) return; started = true;
+    requestAnimationFrame(() => {
+      document.body.classList.add('is-loaded');
+      g1 && g1.classList.add('on');
+    });
+  };
+  /* erst starten, wenn die Schriften da sind (max. 1,5 s warten) */
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(start);
+  setTimeout(start, 1500);
 
   /* ---------- Einblenden beim Scrollen ---------- */
   const countUp = el => {
