@@ -1029,3 +1029,25 @@ a.cinfo__sub:hover { color: var(--taupe-light) !important; text-decoration: unde
 @media (prefers-reduced-motion: reduce) { .js .vd--home .vd__card { opacity: 1; transform: none; } }
 @media (max-width: 900px) { .vd__head { flex-direction: column; align-items: flex-start; } }
 .vd__card:last-child { scroll-snap-align: end; }
+
+/* Mobile-Korrekturen (müssen am Ende stehen) */
+@media (max-width: 900px) {
+  .contact-home__grid { grid-template-columns: 1fr; }
+  .hform, .mform { width: 100%; }
+}
+@media (max-width: 600px) {
+  .mform__top { flex-wrap: wrap; gap: 0 1rem; }
+  .msteps li { gap: .35rem; font-size: .82rem; }
+  .msteps li span { width: 1.4rem; height: 1.4rem; font-size: .78rem; }
+  .vd__nav button { width: 3rem; height: 3rem; }
+}
+@media (max-width: 600px) {
+  .tile:not(.tile--hero):not(.tile--more) { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: auto auto; column-gap: 1rem; row-gap: .15rem; align-items: center; padding: 1.1rem 1.1rem; border-radius: 18px; }
+  .tile:not(.tile--hero):not(.tile--more) .tile__ico { grid-row: 1 / span 2; width: 3rem; height: 3rem; border-radius: 14px; }
+  .tile:not(.tile--hero):not(.tile--more) h3 { margin: 0; font-size: 1.4rem; align-self: end; }
+  .tile:not(.tile--hero):not(.tile--more) p { font-size: 1rem; align-self: start; }
+  .tile:not(.tile--hero):not(.tile--more) .tile__go { grid-column: 3; grid-row: 1 / span 2; margin: 0; align-self: center; width: 2.5rem; height: 2.5rem; }
+  .tile--wide > div { display: contents; }
+  .tile--hero { padding: 1.6rem; }
+  .bento { gap: .8rem; }
+}
