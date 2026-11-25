@@ -22,3 +22,8 @@ Statischer Entwurf für kanzlei-wulf.de (HTML, CSS, JS – keine Abhängigkeiten
 **Bearbeiten:** Inhalte liegen in `src/*.html`, Kopf und Fuß in `build.py`. Nach Änderungen `python3 build.py` ausführen – die fertigen Seiten landen im Hauptordner.
 
 **Live-Vorschau:** https://shahzadishq.github.io/wulf/
+
+
+## Design 2 (Alternative zur Präsentation)
+Ordner `v2/` – eigenständige Startseite mit eigenem Stil: Weinrot als Hauptfarbe, Bodoni Moda + Figtree, Guilloche-Muster (wie auf Urkunden), Bögen als Bildrahmen, horizontal scrollende Rechtsgebiete, Wort-für-Wort-Satz, Schritte mit Sticky-Spalte.
+Live: https://shahzadishq.github.io/wulf/v2/
