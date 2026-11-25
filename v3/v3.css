@@ -484,3 +484,4 @@ a { color: inherit; }
   .mcall svg { width: 1.1rem; height: 1.1rem; }
   .foot { padding-bottom: 3.5rem; }
 }
+.abox__img--top { background-size: auto 230%; background-position: 50% 0; }
