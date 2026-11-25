@@ -129,7 +129,6 @@ a:hover { color: var(--wine); }
 .brand { display: flex; align-items: center; text-decoration: none; flex: none; }
 .brand__logo { height: 3.4rem; width: auto; transition: height .5s var(--ease); }
 .is-solid .brand__logo { height: 2.9rem; }
-.header:not(.is-solid) .brand__logo { filter: brightness(0) invert(1); }
 .brand__fallback { display: none; font-family: var(--serif); font-size: 1.45rem; color: #fff; background: var(--taupe); padding: .35rem .9rem; letter-spacing: .04em; }
 .brand.no-logo .brand__logo { display: none; }
 .brand.no-logo .brand__fallback { display: block; }
@@ -185,7 +184,7 @@ a:hover { color: var(--wine); }
   mask-image: linear-gradient(90deg, transparent 0%, #000 32%), linear-gradient(180deg, transparent 0%, #000 22%);
   mask-composite: intersect;
 }
-.hero__photo img { width: 100%; height: 112%; object-fit: cover; object-position: 80% 8%; will-change: transform; }
+.hero__photo img { width: 100%; height: 112%; object-fit: cover; object-position: 96% 8%; will-change: transform; }
 .hero__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, var(--navy-900) 0%, rgba(8,36,54,0) 45%); }
 .hero__badge {
   position: absolute; right: max(1.25rem, calc((100vw - var(--wrap)) / 2)); bottom: 6.5rem; z-index: 2;
