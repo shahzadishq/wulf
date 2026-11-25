@@ -1,32 +1,39 @@
 <!-- title: Kontakt – Rechtsanwälte Wulf & Collegen | description: Kontakt zu Rechtsanwälte Wulf & Collegen: Telefon, E-Mail und unverbindliche Anfrage für Magdeburg und Stendal. | nav: kontakt -->
-    <section class="pagehead">
+    <section class="pagehero">
       <div class="wrap">
-        <h1>Kontakt</h1>
-        <p>Am schnellsten erreichen Sie uns telefonisch, montags bis freitags von 8 bis 20 Uhr. Sie können uns auch schreiben.</p>
+        <ol class="crumbs up"><li><a href="index.html">Startseite</a></li><li aria-current="page">Kontakt</li></ol>
+        <p class="kicker up" style="--d:.1s">Kontakt</p>
+        <h1 class="up" style="--d:.15s">Wie können wir Sie unterstützen?</h1>
+        <p class="up" style="--d:.25s">Am schnellsten erreichen Sie uns telefonisch, montags bis freitags von 8 bis 20 Uhr. Oder Sie schreiben uns.</p>
         <div class="quick">
-          <a class="quick__item" href="tel:+4939173746100"><span>Magdeburg</span><strong>0391 737 461 00</strong></a>
-          <a class="quick__item" href="tel:+4939312527222"><span>Stendal</span><strong>03931 252 72 22</strong></a>
-          <a class="quick__item" href="mailto:info@kanzlei-wulf.de"><span>E-Mail</span><strong>info@kanzlei-wulf.de</strong></a>
+          <a class="up" style="--d:.3s" href="tel:+4939173746100"><span class="quick__ico"><svg><use href="#i-phone"/></svg></span><span><span>Kanzlei Magdeburg</span><strong>0391 737 461 00</strong></span></a>
+          <a class="up" style="--d:.4s" href="tel:+4939312527222"><span class="quick__ico"><svg><use href="#i-phone"/></svg></span><span><span>Kanzlei Stendal</span><strong>03931 252 72 22</strong></span></a>
+          <a class="up" style="--d:.5s" href="mailto:info@kanzlei-wulf.de"><span class="quick__ico"><svg><use href="#i-mail"/></svg></span><span><span>E-Mail</span><strong>info@kanzlei-wulf.de</strong></span></a>
         </div>
       </div>
     </section>
 
-    <!-- KONTAKT -->
-    <section id="formular" class="section">
+    <section class="section" id="formular">
       <div class="wrap contact">
-        <div class="contact__intro">
-          <h2>Ihre Nachricht an uns</h2>
-          <p>Schreiben Sie uns in eigenen Worten, worum es geht. Die Anfrage ist unverbindlich und kostenfrei.</p>
-          <div class="callout">
+        <div class="contact__aside">
+          <p class="kicker reveal">Anfrage</p>
+          <h2 class="reveal" style="--d:.1s">Schildern Sie uns Ihr Anliegen</h2>
+          <p class="lead reveal" style="--d:.15s">Schreiben Sie uns in eigenen Worten, worum es geht. Die Anfrage ist unverbindlich.</p>
+          <div class="deadline reveal" style="--d:.2s">
             <h3>Läuft eine Frist?</h3>
-            <p>Etwa nach einer Kündigung bleiben oft nur drei Wochen. Rufen Sie uns dann bitte zusätzlich an:</p>
-            <p class="callout__phones"><a href="tel:+4939173746100">0391 737 461 00</a><a href="tel:+4939312527222">03931 252 72 22</a></p>
+            <p>Nach einer Kündigung bleiben oft nur drei Wochen. Rufen Sie uns dann bitte zusätzlich an:</p>
+            <p class="deadline__phones"><a href="tel:+4939173746100">0391 737 461 00</a><a href="tel:+4939312527222">03931 252 72 22</a></p>
           </div>
-          <h3 class="contact__next">Was passiert nach Ihrer Anfrage?</h3>
-          <p>Wir melden uns bei Ihnen, klären erste Fragen und schlagen Ihnen einen Termin vor – in der Kanzlei, am Telefon oder per Video.</p>
+          <h3 class="reveal">Was passiert nach Ihrer Anfrage?</h3>
+          <ol class="steps-mini reveal">
+            <li>Wir lesen Ihre Nachricht und ordnen sie dem passenden Rechtsgebiet zu.</li>
+            <li>Wir melden uns bei Ihnen und klären erste Fragen.</li>
+            <li>Wir schlagen Ihnen einen Termin vor – in der Kanzlei, am Telefon oder per Video.</li>
+          </ol>
         </div>
 
-        <form class="form" id="form" novalidate>
+        <form class="form reveal" id="form" novalidate style="--d:.15s">
+          <h2>Ihre Nachricht</h2>
           <div class="field">
             <label for="f-name">Ihr Name</label>
             <input id="f-name" name="name" type="text" autocomplete="name" required>
@@ -54,10 +61,10 @@
           </div>
           <button class="btn btn--block" type="submit">Anfrage senden</button>
           <div class="form__done" role="status" aria-live="polite" hidden>
+            <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".25"/><path d="M15 27l7 7 15-15" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h3>Anfrage gesendet</h3>
             <p>Vielen Dank. Wir melden uns so bald wie möglich bei Ihnen.</p>
           </div>
         </form>
       </div>
     </section>
-  

@@ -5,45 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Unsere Anwälte – Rechtsanwälte Wulf & Collegen</title>
   <meta name="description" content="Lernen Sie die Rechtsanwälte und Fachanwälte von Wulf & Collegen in Magdeburg und Stendal kennen.">
+  <meta name="theme-color" content="#082436">
   <link rel="icon" href="https://kanzlei-wulf.de/wp-content/uploads/2026/09/cropped-FavIcon_W-C_512-270x270.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js');try{var s=localStorage.getItem('wulf-size');if(s)document.documentElement.setAttribute('data-size',s)}catch(e){}</script>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></g></symbol>
+  <symbol id="i-office" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 21V5l8-2v18M12 8h8v13M2 21h20"/><path d="M7 8h2M7 12h2M7 16h2M15 12h2M15 16h2"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.01"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+</svg>
   <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
-  <div class="callbar">
-    <div class="wrap callbar__inner">
-      <p class="callbar__hours">Mo–Fr, 8 bis 20 Uhr erreichbar</p>
-      <ul class="callbar__phones">
-        <li><span>Magdeburg</span> <a href="tel:+4939173746100">0391 737 461 00</a></li>
-        <li><span>Stendal</span> <a href="tel:+4939312527222">03931 252 72 22</a></li>
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <p class="topbar__hours"><svg class="ico"><use href="#i-clock"/></svg> Montag bis Freitag, 8 bis 20 Uhr</p>
+      <ul class="topbar__phones">
+        <li><span>Magdeburg</span><a href="tel:+4939173746100">0391 737 461 00</a></li>
+        <li><span>Stendal</span><a href="tel:+4939312527222">03931 252 72 22</a></li>
       </ul>
       <div class="textsize" role="group" aria-label="Schriftgröße">
         <span id="ts-label">Schrift</span>
-        <button type="button" data-size="1" aria-pressed="true" aria-describedby="ts-label">A</button>
-        <button type="button" data-size="2" aria-pressed="false" aria-describedby="ts-label" class="ts-lg">A</button>
-        <button type="button" data-size="3" aria-pressed="false" aria-describedby="ts-label" class="ts-xl">A</button>
+        <button type="button" data-size="1" aria-pressed="true" aria-describedby="ts-label" aria-label="Normale Schrift">A</button>
+        <button type="button" data-size="2" aria-pressed="false" aria-describedby="ts-label" aria-label="Große Schrift" class="ts-lg">A</button>
+        <button type="button" data-size="3" aria-pressed="false" aria-describedby="ts-label" aria-label="Sehr große Schrift" class="ts-xl">A</button>
       </div>
     </div>
   </div>
 
-  <header class="header">
+  <header class="header header--page">
     <div class="wrap header__inner">
       <a class="brand" href="index.html" aria-label="Wulf &amp; Collegen Rechtsanwälte, zur Startseite">
-        <img class="brand__logo" src="https://kanzlei-wulf.de/wp-content/uploads/2022/05/Logo_ohne_Rand.png" alt="" onerror="this.parentNode.classList.add('no-logo')">
-        <span class="brand__fallback">
-          <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
-            <rect x="1" y="1" width="46" height="46" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M10 14 L17 35 L24 19 L31 35 L38 14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
-          </svg>
-          <span class="brand__text"><strong>Wulf &amp; Collegen</strong><small>Rechtsanwälte</small></span>
-        </span>
+        <img class="brand__logo" src="https://kanzlei-wulf.de/wp-content/uploads/2022/05/Logo_ohne_Rand.webp" alt="" width="614" height="219" onerror="this.parentNode.classList.add('no-logo')">
+        <span class="brand__fallback">WULF &amp; COLLEGEN</span>
       </a>
-      <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav">Menü</button>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav"><span class="navtoggle__bars" aria-hidden="true"></span><span class="navtoggle__text">Menü</span></button>
       <nav id="nav" class="nav" aria-label="Hauptnavigation">
         <ul>
           <li><a href="index.html">Startseite</a></li>
@@ -53,16 +59,18 @@
           <li><a href="kontakt.html">Kontakt</a></li>
           <li><a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></li>
         </ul>
-        <a class="btn btn--small" href="kontakt.html#formular">Anliegen schildern</a>
+        <a class="btn btn--sm" href="kontakt.html#formular">Anliegen schildern</a>
       </nav>
     </div>
   </header>
 
-  <main id="inhalt">    <section class="pagehead">
+  <main id="inhalt">    <section class="pagehero">
       <div class="wrap">
-        <h1>Unsere Anwälte</h1>
-        <p>Sechs Rechtsanwälte, die meisten mit Fachanwaltstitel. Hier sehen Sie, wer wofür zuständig ist.</p>
-        <nav class="jump" aria-label="Anwälte auf dieser Seite">
+        <ol class="crumbs up"><li><a href="index.html">Startseite</a></li><li aria-current="page">Anwälte</li></ol>
+        <p class="kicker up" style="--d:.1s">Anwälte</p>
+        <h1 class="up" style="--d:.15s">Die Menschen hinter unserer Beratung</h1>
+        <p class="up" style="--d:.25s">Sechs Rechtsanwälte, die meisten mit Fachanwaltstitel. Hier sehen Sie, wer wofür zuständig ist.</p>
+        <nav class="chips up" style="--d:.35s" aria-label="Anwälte auf dieser Seite">
           <a href="#sandro-wulf">Sandro Wulf</a>
           <a href="#hendrik-lippmann">Hendrik Lippmann</a>
           <a href="#jan-steinmetz">Jan Steinmetz</a>
@@ -73,11 +81,11 @@
       </div>
     </section>
 
-    <section class="section section--flush">
+    <section class="section">
       <div class="wrap">
         <article class="profile" id="sandro-wulf">
-          <div class="profile__photo" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-12_3840x2160-scaled.jpg" alt="Rechtsanwalt Sandro Wulf"></div>
-          <div class="profile__text">
+          <div class="profile__photo reveal" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-12_3840x2160-scaled.jpg" alt="Rechtsanwalt Sandro Wulf"></div>
+          <div class="profile__text reveal" style="--d:.15s">
             <h2>Sandro Wulf</h2>
             <p class="profile__title">Rechtsanwalt, Fachanwalt für Arbeitsrecht, Mediator</p>
             <p>Sandro Wulf ist seit 1997 als Rechtsanwalt zugelassen und trägt seit 2004 den Titel Fachanwalt für Arbeitsrecht. Er berät im Individual- und Kollektivarbeitsrecht, besonders bei Kündigungen und Kündigungsschutzverfahren.</p>
@@ -85,24 +93,24 @@
               <div><dt>Schwerpunkte</dt><dd>Arbeitsrecht, Kündigungsschutz, Mediation</dd></div>
               <div><dt>Mitgliedschaften</dt><dd>Deutscher Anwaltverein, Verein der deutschen Arbeitsrechtsanwälte, ADVOGATE; Vorsitzender von Haus &amp; Grund nördliche Altmark</dd></div>
             </dl>
+            <a class="btn btn--line" href="kontakt.html#formular">Termin anfragen</a>
           </div>
         </article>
-
         <article class="profile" id="hendrik-lippmann">
-          <div class="profile__photo" data-initials="HL"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-16-scaled.jpg" alt="Rechtsanwalt Hendrik Lippmann"></div>
-          <div class="profile__text">
+          <div class="profile__photo reveal" data-initials="HL"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-16-scaled.jpg" alt="Rechtsanwalt Hendrik Lippmann"></div>
+          <div class="profile__text reveal" style="--d:.15s">
             <h2>Hendrik Lippmann</h2>
             <p class="profile__title">Partner, Fachanwalt für Familienrecht</p>
             <p>Hendrik Lippmann ist seit 2010 Fachanwalt für Familienrecht. Er studierte an der Universität Halle-Wittenberg und war zuvor als Opferanwalt am Bundesgerichtshof tätig.</p>
             <dl class="facts">
               <div><dt>Schwerpunkte</dt><dd>Familien- und Scheidungsrecht, Erbrecht, Strafrecht</dd></div>
             </dl>
+            <a class="btn btn--line" href="kontakt.html#formular">Termin anfragen</a>
           </div>
         </article>
-
         <article class="profile" id="jan-steinmetz">
-          <div class="profile__photo" data-initials="JS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-7-scaled.jpg" alt="Rechtsanwalt Jan Steinmetz"></div>
-          <div class="profile__text">
+          <div class="profile__photo reveal" data-initials="JS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-7-scaled.jpg" alt="Rechtsanwalt Jan Steinmetz"></div>
+          <div class="profile__text reveal" style="--d:.15s">
             <h2>Jan Steinmetz</h2>
             <p class="profile__title">Fachanwalt für Miet- und Wohnungseigentumsrecht, Fachanwalt für Arbeitsrecht, Mediator</p>
             <p>Jan Steinmetz ist seit 2002 als Rechtsanwalt zugelassen. Seit 2010 ist er Fachanwalt für Miet- und Wohnungseigentumsrecht, seit 2023 auch für Arbeitsrecht.</p>
@@ -110,12 +118,12 @@
               <div><dt>Schwerpunkte</dt><dd>Immobilien- und Mietrecht, Gewerbemietverträge, Arbeitsrecht und Kündigungsschutz</dd></div>
               <div><dt>Mitgliedschaften</dt><dd>Deutscher Anwaltverein; berät Haus &amp; Grund nördliche Altmark e.&nbsp;V.</dd></div>
             </dl>
+            <a class="btn btn--line" href="kontakt.html#formular">Termin anfragen</a>
           </div>
         </article>
-
         <article class="profile" id="lars-haenig">
-          <div class="profile__photo" data-initials="LH"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-15_3840x2160-scaled.jpg" alt="Rechtsanwalt Lars Hänig"></div>
-          <div class="profile__text">
+          <div class="profile__photo reveal" data-initials="LH"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-15_3840x2160-scaled.jpg" alt="Rechtsanwalt Lars Hänig"></div>
+          <div class="profile__text reveal" style="--d:.15s">
             <h2>Lars Hänig</h2>
             <p class="profile__title">Rechtsanwalt</p>
             <p>Lars Hänig ist seit 2005 als Rechtsanwalt zugelassen. Neben dem Arbeitsrecht berät er zu Verträgen, AGB, Datenschutz und Online-Handel sowie bei Abmahnungen, im Marken- und Urheberrecht.</p>
@@ -123,69 +131,67 @@
               <div><dt>Schwerpunkte</dt><dd>Arbeitsrecht, IT-Recht, Online-Handel, Wettbewerbsrecht</dd></div>
               <div><dt>Mitgliedschaften</dt><dd>Deutscher Anwaltverein (Arbeitsgemeinschaften IT-Recht sowie Geistiges Eigentum und Medien); Vorprüfungsausschuss Sportrecht der Anwaltskammer Sachsen-Anhalt</dd></div>
             </dl>
+            <a class="btn btn--line" href="kontakt.html#formular">Termin anfragen</a>
           </div>
         </article>
-
         <article class="profile" id="maximilian-scholze">
-          <div class="profile__photo" data-initials="MS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/04/Wulf-und-Collegen_Mitarbeiterportraits-9-scaled.jpg" alt="Rechtsanwalt Maximilian Scholze"></div>
-          <div class="profile__text">
+          <div class="profile__photo reveal" data-initials="MS"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2023/04/Wulf-und-Collegen_Mitarbeiterportraits-9-scaled.jpg" alt="Rechtsanwalt Maximilian Scholze"></div>
+          <div class="profile__text reveal" style="--d:.15s">
             <h2>Maximilian Scholze</h2>
             <p class="profile__title">Fachanwalt für Strafrecht</p>
             <p>Maximilian Scholze absolvierte sein Referendariat in unserer Kanzlei und ist seit 2023 Rechtsanwalt, seit 2026 Fachanwalt für Strafrecht.</p>
             <dl class="facts">
               <div><dt>Schwerpunkte</dt><dd>Ermittlungs- und Strafverfahren, Bußgeldrecht, Kündigungsschutz, Zivilrecht und Vertragsgestaltung</dd></div>
             </dl>
+            <a class="btn btn--line" href="kontakt.html#formular">Termin anfragen</a>
           </div>
         </article>
-
         <article class="profile" id="sebastian-weise">
-          <div class="profile__photo" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2025/03/Herr_Weise_Hintergrund-scaled.jpg" alt="Rechtsanwalt Sebastian Weise"></div>
-          <div class="profile__text">
+          <div class="profile__photo reveal" data-initials="SW"><img loading="lazy" onerror="this.remove()" src="https://kanzlei-wulf.de/wp-content/uploads/2025/03/Herr_Weise_Hintergrund-scaled.jpg" alt="Rechtsanwalt Sebastian Weise"></div>
+          <div class="profile__text reveal" style="--d:.15s">
             <h2>Sebastian Weise</h2>
             <p class="profile__title">Rechtsanwalt, Schwerpunkt Familienrecht</p>
             <p>Sebastian Weise studierte Rechts- und Politikwissenschaften an der Universität Halle-Wittenberg und schloss 2008 den Fachanwaltslehrgang Familienrecht ab. Er bringt zudem Erfahrung als Verfahrensbeistand mit.</p>
             <dl class="facts">
               <div><dt>Schwerpunkte</dt><dd>Familienrecht</dd></div>
             </dl>
+            <a class="btn btn--line" href="kontakt.html#formular">Termin anfragen</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section cta">
-      <div class="wrap cta__inner">
-        <div>
-          <h2>Mit wem möchten Sie sprechen?</h2>
-          <p>Nennen Sie uns gern Ihren Wunschanwalt. Wir vereinbaren einen Termin in Magdeburg, in Stendal, am Telefon oder per Video.</p>
-        </div>
-        <div class="cta__actions">
-          <a class="btn" href="kontakt.html#formular">Termin anfragen</a>
-          <a class="btn btn--ghost" href="tel:+4939173746100">0391 737 461 00</a>
+    <section class="cta">
+      <div class="wrap">
+        <div class="cta__box reveal">
+          <div><h2>Mit wem möchten Sie sprechen?</h2><p>Nennen Sie uns gern Ihren Wunschanwalt. Wir vereinbaren einen Termin in Magdeburg, in Stendal, am Telefon oder per Video.</p></div>
+          <div class="cta__actions"><a class="btn btn--light" href="kontakt.html#formular">Termin anfragen</a><a class="btn btn--line-light" href="tel:+4939173746100"><svg class="ico"><use href="#i-phone"/></svg> Anrufen</a></div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap footer__grid">
+    <div class="wrap footer__top">
       <div>
-        <p class="footer__brand">Rechtsanwälte Wulf &amp; Collegen</p>
-        <p>Mitglied im internationalen Kanzleinetzwerk Avolink.</p>
+        <p class="footer__brand">Rechtsanwälte<br>Wulf &amp; Collegen</p>
+        <p>Klar beraten. Vorausschauend begleitet. Mitglied im internationalen Kanzleinetzwerk Avolink.</p>
       </div>
       <div>
         <h2>Kanzlei Magdeburg</h2>
-        <p>Breiter Weg 31, 39104 Magdeburg<br><a href="tel:+4939173746100">0391 737 461 00</a></p>
+        <p>Breiter Weg 31<br>39104 Magdeburg<br><a class="footer__phone" href="tel:+4939173746100">0391 737 461 00</a></p>
       </div>
       <div>
         <h2>Kanzlei Stendal</h2>
-        <p>Breite Straße 54, 39576 Stendal<br><a href="tel:+4939312527222">03931 252 72 22</a></p>
+        <p>Breite Straße 54<br>39576 Stendal<br><a class="footer__phone" href="tel:+4939312527222">03931 252 72 22</a></p>
       </div>
       <div>
         <h2>Service</h2>
         <ul>
+          <li><a href="mailto:info@kanzlei-wulf.de">info@kanzlei-wulf.de</a></li>
+          <li><a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></li>
           <li><a href="https://kanzlei-wulf.de/news/">Ratgeber und News</a></li>
           <li><a href="https://kanzlei-wulf.de/podcast/">Podcast</a></li>
-          <li><a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></li>
           <li><a href="https://kanzlei-wulf.de/karriere/">Karriere</a></li>
         </ul>
       </div>
@@ -198,6 +204,11 @@
       </ul>
     </div>
   </footer>
+
+  <div class="callfab" aria-label="Schnell anrufen">
+    <a href="tel:+4939173746100"><span>Magdeburg</span><strong>Anrufen</strong></a>
+    <a href="tel:+4939312527222"><span>Stendal</span><strong>Anrufen</strong></a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

@@ -5,45 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Die Kanzlei – Rechtsanwälte Wulf & Collegen</title>
   <meta name="description" content="Unsere Kanzleien in Magdeburg und Stendal: Adressen, Erreichbarkeit, Beratung per Telefon und Video und unser Netzwerk.">
+  <meta name="theme-color" content="#082436">
   <link rel="icon" href="https://kanzlei-wulf.de/wp-content/uploads/2026/09/cropped-FavIcon_W-C_512-270x270.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js');try{var s=localStorage.getItem('wulf-size');if(s)document.documentElement.setAttribute('data-size',s)}catch(e){}</script>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></g></symbol>
+  <symbol id="i-office" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 21V5l8-2v18M12 8h8v13M2 21h20"/><path d="M7 8h2M7 12h2M7 16h2M15 12h2M15 16h2"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.01"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+</svg>
   <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
-  <div class="callbar">
-    <div class="wrap callbar__inner">
-      <p class="callbar__hours">Mo–Fr, 8 bis 20 Uhr erreichbar</p>
-      <ul class="callbar__phones">
-        <li><span>Magdeburg</span> <a href="tel:+4939173746100">0391 737 461 00</a></li>
-        <li><span>Stendal</span> <a href="tel:+4939312527222">03931 252 72 22</a></li>
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <p class="topbar__hours"><svg class="ico"><use href="#i-clock"/></svg> Montag bis Freitag, 8 bis 20 Uhr</p>
+      <ul class="topbar__phones">
+        <li><span>Magdeburg</span><a href="tel:+4939173746100">0391 737 461 00</a></li>
+        <li><span>Stendal</span><a href="tel:+4939312527222">03931 252 72 22</a></li>
       </ul>
       <div class="textsize" role="group" aria-label="Schriftgröße">
         <span id="ts-label">Schrift</span>
-        <button type="button" data-size="1" aria-pressed="true" aria-describedby="ts-label">A</button>
-        <button type="button" data-size="2" aria-pressed="false" aria-describedby="ts-label" class="ts-lg">A</button>
-        <button type="button" data-size="3" aria-pressed="false" aria-describedby="ts-label" class="ts-xl">A</button>
+        <button type="button" data-size="1" aria-pressed="true" aria-describedby="ts-label" aria-label="Normale Schrift">A</button>
+        <button type="button" data-size="2" aria-pressed="false" aria-describedby="ts-label" aria-label="Große Schrift" class="ts-lg">A</button>
+        <button type="button" data-size="3" aria-pressed="false" aria-describedby="ts-label" aria-label="Sehr große Schrift" class="ts-xl">A</button>
       </div>
     </div>
   </div>
 
-  <header class="header">
+  <header class="header header--page">
     <div class="wrap header__inner">
       <a class="brand" href="index.html" aria-label="Wulf &amp; Collegen Rechtsanwälte, zur Startseite">
-        <img class="brand__logo" src="https://kanzlei-wulf.de/wp-content/uploads/2022/05/Logo_ohne_Rand.png" alt="" onerror="this.parentNode.classList.add('no-logo')">
-        <span class="brand__fallback">
-          <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
-            <rect x="1" y="1" width="46" height="46" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M10 14 L17 35 L24 19 L31 35 L38 14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
-          </svg>
-          <span class="brand__text"><strong>Wulf &amp; Collegen</strong><small>Rechtsanwälte</small></span>
-        </span>
+        <img class="brand__logo" src="https://kanzlei-wulf.de/wp-content/uploads/2022/05/Logo_ohne_Rand.webp" alt="" width="614" height="219" onerror="this.parentNode.classList.add('no-logo')">
+        <span class="brand__fallback">WULF &amp; COLLEGEN</span>
       </a>
-      <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav">Menü</button>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav"><span class="navtoggle__bars" aria-hidden="true"></span><span class="navtoggle__text">Menü</span></button>
       <nav id="nav" class="nav" aria-label="Hauptnavigation">
         <ul>
           <li><a href="index.html">Startseite</a></li>
@@ -53,121 +59,114 @@
           <li><a href="kontakt.html">Kontakt</a></li>
           <li><a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></li>
         </ul>
-        <a class="btn btn--small" href="kontakt.html#formular">Anliegen schildern</a>
+        <a class="btn btn--sm" href="kontakt.html#formular">Anliegen schildern</a>
       </nav>
     </div>
   </header>
 
-  <main id="inhalt">    <section class="pagehead">
-      <div class="wrap pagehead__split">
+  <main id="inhalt">    <section class="pagehero">
+      <div class="wrap pagehero__split">
         <div>
-          <h1>Die Kanzlei</h1>
-          <p>Wir beraten Privatpersonen, Unternehmen und Freiberufler – in unseren Kanzleien in Magdeburg und Stendal, am Telefon oder per Video. Arbeitgeber betreuen wir bundesweit.</p>
+          <ol class="crumbs up"><li><a href="index.html">Startseite</a></li><li aria-current="page">Kanzlei</li></ol>
+          <p class="kicker up" style="--d:.1s">Die Kanzlei</p>
+          <h1 class="up" style="--d:.15s">Persönlich vor Ort. Digital erreichbar.</h1>
+          <p class="up" style="--d:.25s">Wir beraten Privatpersonen, Unternehmen und Freiberufler – in Magdeburg und Stendal, am Telefon oder per Video. Arbeitgeber betreuen wir bundesweit.</p>
         </div>
-        <figure class="pagehead__photo">
-          <img src="https://kanzlei-wulf.de/wp-content/uploads/2026/04/kanzlei_wulf_default-scaled.jpg" alt="Kanzlei Wulf &amp; Collegen" onerror="this.closest('figure').remove()">
+        <figure class="pagehero__img up" style="--d:.3s">
+          <img src="https://kanzlei-wulf.de/wp-content/uploads/2026/09/Header-RA-Team_01-2024-1600.webp" alt="Das Anwaltsteam von Wulf &amp; Collegen" onerror="this.closest('figure').remove()">
         </figure>
       </div>
     </section>
 
-    <section class="section section--flush">
+    <section class="section dark">
       <div class="wrap">
-        <div class="offices offices--light">
-          <article class="office" id="magdeburg">
-            <h2>Magdeburg</h2>
+        <div class="section__head">
+          <div><p class="kicker reveal">Standorte</p><h2 class="reveal" style="--d:.1s">So finden Sie uns</h2></div>
+          <p class="reveal" style="--d:.2s">Persönliche Gespräche finden nach Terminvereinbarung statt.</p>
+        </div>
+        <div class="twocol">
+          <article class="office reveal" id="magdeburg">
+            <h3>Magdeburg</h3>
             <address>Breiter Weg 31<br>39104 Magdeburg</address>
-            <a class="office__phone" href="tel:+4939173746100">0391 737 461 00</a>
-            <p><a class="office__route" href="https://www.google.com/maps/search/?api=1&amp;query=Breiter+Weg+31+39104+Magdeburg">Route planen</a></p>
+            <div class="office__row"><a class="office__phone" href="tel:+4939173746100"><svg><use href="#i-phone"/></svg>0391 737 461 00</a><a class="office__route" href="https://www.google.com/maps/search/?api=1&amp;query=Breiter+Weg+31+39104+Magdeburg">Route planen</a></div>
           </article>
-          <article class="office" id="stendal">
-            <h2>Stendal</h2>
+          <article class="office reveal" id="stendal" style="--d:.1s">
+            <h3>Stendal</h3>
             <address>Breite Straße 54<br>39576 Stendal</address>
-            <a class="office__phone" href="tel:+4939312527222">03931 252 72 22</a>
-            <p><a class="office__route" href="https://www.google.com/maps/search/?api=1&amp;query=Breite+Stra%C3%9Fe+54+39576+Stendal">Route planen</a></p>
+            <div class="office__row"><a class="office__phone" href="tel:+4939312527222"><svg><use href="#i-phone"/></svg>03931 252 72 22</a><a class="office__route" href="https://www.google.com/maps/search/?api=1&amp;query=Breite+Stra%C3%9Fe+54+39576+Stendal">Route planen</a></div>
           </article>
-          <article class="office">
-            <h2>Erreichbarkeit</h2>
+          <article class="office reveal" style="--d:.2s">
+            <h3>Erreichbarkeit</h3>
             <dl class="hours">
               <div><dt>Telefon</dt><dd>Montag bis Freitag, 8 bis 20 Uhr</dd></div>
               <div><dt>Persönlich</dt><dd>nach Terminvereinbarung</dd></div>
               <div><dt>E-Mail</dt><dd><a href="mailto:info@kanzlei-wulf.de">info@kanzlei-wulf.de</a></dd></div>
             </dl>
           </article>
+          <article class="office reveal" style="--d:.3s">
+            <h3>Beratung von zu Hause</h3>
+            <p>Viele Fragen klären wir am Telefon oder per Video. Unterlagen tauschen Sie sicher über unsere WebAkte mit uns aus.</p>
+            <a class="office__route" href="https://kanzlei-wulf.de/webakte/">Mehr zur WebAkte</a>
+          </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section section--tint">
-      <div class="wrap">
-        <header class="section__head">
-          <h2>So arbeiten wir</h2>
-          <p>Gute Beratung heißt für uns: Sie verstehen Ihre Lage und entscheiden selbst.</p>
-        </header>
-        <ol class="steps">
-          <li>
-            <h3>Ihr Anliegen verstehen</h3>
-            <p>Wir klären den Sachverhalt und fragen, was Sie erreichen möchten.</p>
-          </li>
-          <li>
-            <h3>Möglichkeiten erläutern</h3>
-            <p>Sie erfahren Ihre Handlungsmöglichkeiten mit Risiken und Kosten.</p>
-          </li>
-          <li>
-            <h3>Das Vorgehen abstimmen</h3>
-            <p>Den weiteren Weg legen wir gemeinsam mit Ihnen fest.</p>
-          </li>
-        </ol>
       </div>
     </section>
 
     <section class="section">
-      <div class="wrap twocol">
-        <div>
-          <h2>Beratung von zu Hause</h2>
-          <p>Nicht jeder Termin muss in der Kanzlei stattfinden. Viele Fragen klären wir am Telefon oder per Video. Unterlagen tauschen Sie sicher über unsere WebAkte mit uns aus.</p>
-          <p><a href="https://kanzlei-wulf.de/webakte/">Mehr zur WebAkte</a></p>
+      <div class="wrap">
+        <div class="section__head">
+          <div><p class="kicker reveal">Arbeitsweise</p><h2 class="reveal" style="--d:.1s">So arbeiten wir</h2></div>
+          <p class="reveal" style="--d:.2s">Gute Beratung heißt für uns: Sie verstehen Ihre Lage und entscheiden selbst.</p>
         </div>
-        <div>
-          <h2>Internationales Netzwerk</h2>
-          <p>Wir sind Mitglied im internationalen Kanzleinetzwerk Avolink. So haben wir auch bei Fragen mit Auslandsbezug Kontakt zu Partnerkanzleien.</p>
-          <p><a href="https://kanzlei-wulf.de/karriere/">Karriere bei Wulf &amp; Collegen</a></p>
+        <div class="twocol">
+          <div class="panel reveal">
+            <h2>Klar und verständlich</h2>
+            <ul class="ticks">
+              <li>Wir klären zuerst den Sachverhalt und Ihre Ziele.</li>
+              <li>Wir erläutern Ihre Möglichkeiten mit Risiken und Kosten.</li>
+              <li>Das weitere Vorgehen stimmen wir gemeinsam mit Ihnen ab.</li>
+            </ul>
+          </div>
+          <div class="panel reveal" style="--d:.1s">
+            <h2>Internationales Netzwerk</h2>
+            <p>Wir sind Mitglied im internationalen Kanzleinetzwerk Avolink. So haben wir auch bei Fragen mit Auslandsbezug Kontakt zu Partnerkanzleien.</p>
+            <p><a href="https://kanzlei-wulf.de/karriere/">Karriere bei Wulf &amp; Collegen</a></p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section cta">
-      <div class="wrap cta__inner">
-        <div>
-          <h2>Besuchen Sie uns</h2>
-          <p>Vereinbaren Sie einen Termin in der Kanzlei, die für Sie am besten zu erreichen ist.</p>
-        </div>
-        <div class="cta__actions">
-          <a class="btn" href="kontakt.html#formular">Termin anfragen</a>
+    <section class="cta">
+      <div class="wrap">
+        <div class="cta__box reveal">
+          <div><h2>Besuchen Sie uns</h2><p>Vereinbaren Sie einen Termin in der Kanzlei, die für Sie am besten zu erreichen ist.</p></div>
+          <div class="cta__actions"><a class="btn btn--light" href="kontakt.html#formular">Termin anfragen</a><a class="btn btn--line-light" href="tel:+4939173746100"><svg class="ico"><use href="#i-phone"/></svg> Anrufen</a></div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap footer__grid">
+    <div class="wrap footer__top">
       <div>
-        <p class="footer__brand">Rechtsanwälte Wulf &amp; Collegen</p>
-        <p>Mitglied im internationalen Kanzleinetzwerk Avolink.</p>
+        <p class="footer__brand">Rechtsanwälte<br>Wulf &amp; Collegen</p>
+        <p>Klar beraten. Vorausschauend begleitet. Mitglied im internationalen Kanzleinetzwerk Avolink.</p>
       </div>
       <div>
         <h2>Kanzlei Magdeburg</h2>
-        <p>Breiter Weg 31, 39104 Magdeburg<br><a href="tel:+4939173746100">0391 737 461 00</a></p>
+        <p>Breiter Weg 31<br>39104 Magdeburg<br><a class="footer__phone" href="tel:+4939173746100">0391 737 461 00</a></p>
       </div>
       <div>
         <h2>Kanzlei Stendal</h2>
-        <p>Breite Straße 54, 39576 Stendal<br><a href="tel:+4939312527222">03931 252 72 22</a></p>
+        <p>Breite Straße 54<br>39576 Stendal<br><a class="footer__phone" href="tel:+4939312527222">03931 252 72 22</a></p>
       </div>
       <div>
         <h2>Service</h2>
         <ul>
+          <li><a href="mailto:info@kanzlei-wulf.de">info@kanzlei-wulf.de</a></li>
+          <li><a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></li>
           <li><a href="https://kanzlei-wulf.de/news/">Ratgeber und News</a></li>
           <li><a href="https://kanzlei-wulf.de/podcast/">Podcast</a></li>
-          <li><a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></li>
           <li><a href="https://kanzlei-wulf.de/karriere/">Karriere</a></li>
         </ul>
       </div>
@@ -180,6 +179,11 @@
       </ul>
     </div>
   </footer>
+
+  <div class="callfab" aria-label="Schnell anrufen">
+    <a href="tel:+4939173746100"><span>Magdeburg</span><strong>Anrufen</strong></a>
+    <a href="tel:+4939312527222"><span>Stendal</span><strong>Anrufen</strong></a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

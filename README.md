@@ -5,11 +5,11 @@ Statischer Entwurf für kanzlei-wulf.de (HTML, CSS, JS – keine Abhängigkeiten
 **Leitlinien**
 - Zielgruppe überwiegend ältere Mandanten: 19 px Grundschrift, hoher Kontrast, Schriftgrößen-Umschalter (A / A / A), große Klickflächen.
 - Telefonnummern beider Kanzleien immer sichtbar.
-- Genau eine Animation: Die Elbe-Karte im Kopfbereich zeichnet sich beim Laden und verbindet Magdeburg und Stendal. Bei „Bewegung reduzieren“ wird sie statisch angezeigt.
 
-**Gestaltung**
-- Farben: Domgrün `#1F3A36`, Stein `#EEF1ED`, Papier `#FBFCFA`, Siegelrot `#7A2E2E` (nur für Fristen-Hinweis und Fokus).
-- Schriften: Literata (Überschriften), Atkinson Hyperlegible (Text – entwickelt für Menschen mit eingeschränktem Sehvermögen).
+**Gestaltung (v2, Premium)**
+- Farben aus der Marke: Navy `#0B2E44`, Taupe `#B9A88E` (Logo), Weinrot `#8E1B2E`, Nebel `#E6EDF1`.
+- Schriften: DM Serif Display / Text (Titel), Atkinson Hyperlegible (Text – für Menschen mit eingeschränktem Sehvermögen).
+- Bewegung: Titel-Einstieg im Hero, sanftes Einblenden beim Scrollen, hochzählende Kennzahlen, Elbe-Karte, Seitenübergänge. Alles langsam und einmalig; bei „Bewegung reduzieren“ abgeschaltet.
 
 **Offen**
 - Kontaktformular an das bestehende Backend anbinden (`js/main.js`, TODO).
@@ -21,4 +21,4 @@ Statischer Entwurf für kanzlei-wulf.de (HTML, CSS, JS – keine Abhängigkeiten
 
 **Bearbeiten:** Inhalte liegen in `src/*.html`, Kopf und Fuß in `build.py`. Nach Änderungen `python3 build.py` ausführen – die fertigen Seiten landen im Hauptordner.
 
-**Vorschau:** https://raw.githack.com/shahzadishq/wulf/main/index.html
+**Live-Vorschau:** https://shahzadishq.github.io/wulf/
