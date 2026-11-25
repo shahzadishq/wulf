@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rechtsanwälte Wulf &amp; Collegen – Magdeburg und Stendal</title>
+  <meta name="description" content="Rechtsanwälte Wulf & Collegen in Magdeburg und Stendal: Arbeitsrecht, Familienrecht, Immobilienrecht, Erbrecht, Strafrecht und Mediation. Persönlich, am Telefon oder per Video.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- Immer sichtbare Telefonleiste: ältere Mandanten rufen lieber an -->
+  <div class="callbar">
+    <div class="wrap callbar__inner">
+      <p class="callbar__hours">Mo–Fr, 8 bis 20 Uhr erreichbar</p>
+      <ul class="callbar__phones">
+        <li><span>Magdeburg</span> <a href="tel:+4939173746100">0391 737 461 00</a></li>
+        <li><span>Stendal</span> <a href="tel:+4939312527222">03931 252 72 22</a></li>
+      </ul>
+      <div class="textsize" role="group" aria-label="Schriftgröße">
+        <span id="ts-label">Schrift</span>
+        <button type="button" data-size="1" aria-pressed="true" aria-describedby="ts-label">A</button>
+        <button type="button" data-size="2" aria-pressed="false" aria-describedby="ts-label" class="ts-lg">A</button>
+        <button type="button" data-size="3" aria-pressed="false" aria-describedby="ts-label" class="ts-xl">A</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="brand" href="#" aria-label="Wulf & Collegen, zur Startseite">
+        <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="1" y="1" width="46" height="46" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M10 14 L17 35 L24 19 L31 35 L38 14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+        <span class="brand__text">
+          <strong>Wulf &amp; Collegen</strong>
+          <small>Rechtsanwälte</small>
+        </span>
+      </a>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav">Menü</button>
+      <nav id="nav" class="nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#fachbereiche">Fachbereiche</a></li>
+          <li><a href="#anwaelte">Anwälte</a></li>
+          <li><a href="#standorte">Standorte</a></li>
+          <li><a href="https://kanzlei-wulf.de/karriere/">Karriere</a></li>
+          <li><a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></li>
+        </ul>
+        <a class="btn btn--small" href="#kontakt">Anliegen schildern</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhalt">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="hero__firm">Rechtsanwälte Wulf &amp; Collegen</p>
+          <h1>Klar beraten. Vorausschauend begleitet.</h1>
+          <p class="hero__lead">Wir beraten Privatpersonen, Unternehmen und Freiberufler in Magdeburg und Stendal – persönlich in der Kanzlei, am Telefon oder per Video.</p>
+          <div class="hero__actions">
+            <a class="btn" href="#kontakt">Anliegen schildern</a>
+            <a class="btn btn--ghost" href="tel:+4939173746100">Jetzt anrufen</a>
+          </div>
+          <p class="hero__note">Die erste Anfrage ist unverbindlich. Wir melden uns in der Regel am selben Werktag.</p>
+        </div>
+
+        <figure class="hero__map" aria-labelledby="map-cap">
+          <svg viewBox="0 0 420 520" role="img" aria-label="Karte: Die Elbe verbindet unsere Kanzleien in Magdeburg und Stendal">
+            <defs>
+              <linearGradient id="river" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0" stop-color="#5E8A80"/>
+                <stop offset="1" stop-color="#2F5A52"/>
+              </linearGradient>
+            </defs>
+            <!-- ruhige Höhenlinien als Hintergrund -->
+            <g class="contours" fill="none" stroke="#C9D3CE" stroke-width="1">
+              <path d="M-10 90 C 80 60, 160 120, 250 80 S 400 60, 440 100"/>
+              <path d="M-10 150 C 90 120, 170 180, 260 140 S 400 120, 440 160"/>
+              <path d="M-10 330 C 70 300, 150 360, 240 320 S 390 300, 440 340"/>
+              <path d="M-10 400 C 80 370, 170 430, 270 390 S 400 370, 440 410"/>
+              <path d="M-10 470 C 90 440, 180 500, 280 460 S 400 440, 440 480"/>
+            </g>
+            <!-- Elbe -->
+            <path class="river-bank" d="M200 540 C 190 480, 150 450, 170 400 S 250 330, 240 280 S 180 210, 230 160 S 330 90, 300 -20" fill="none" stroke="#DCE5E1" stroke-width="22" stroke-linecap="round"/>
+            <path class="river" d="M200 540 C 190 480, 150 450, 170 400 S 250 330, 240 280 S 180 210, 230 160 S 330 90, 300 -20" fill="none" stroke="url(#river)" stroke-width="5" stroke-linecap="round"/>
+            <!-- Verbindungslinie -->
+            <path class="link" d="M118 410 C 140 320, 110 230, 150 150" fill="none" stroke="#7A2E2E" stroke-width="1.6" stroke-dasharray="3 6"/>
+            <!-- Stendal -->
+            <g class="pin pin--stendal">
+              <circle cx="150" cy="150" r="22" fill="#F4F6F3" stroke="#1F3A36" stroke-width="1.5"/>
+              <circle cx="150" cy="150" r="7" fill="#1F3A36"/>
+              <text x="118" y="114" class="pin__city" text-anchor="end">Stendal</text>
+              <text x="118" y="136" class="pin__addr" text-anchor="end">Breite Straße 54</text>
+            </g>
+            <!-- Magdeburg -->
+            <g class="pin pin--magdeburg">
+              <circle cx="118" cy="410" r="22" fill="#F4F6F3" stroke="#1F3A36" stroke-width="1.5"/>
+              <circle cx="118" cy="410" r="7" fill="#1F3A36"/>
+              <text x="86" y="452" class="pin__city" text-anchor="middle">Magdeburg</text>
+              <text x="86" y="474" class="pin__addr" text-anchor="middle">Breiter Weg 31</text>
+            </g>
+            <text x="268" y="226" class="river-label" transform="rotate(-62 268 226)">Elbe</text>
+          </svg>
+          <figcaption id="map-cap">Zwei Kanzleien an der Elbe – und bundesweit für Arbeitgeber da.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- VERTRAUEN -->
+    <section class="trust" aria-label="Bewertungen unserer Mandanten">
+      <div class="wrap trust__inner">
+        <div class="trust__item">
+          <p class="trust__value">4,88 <span>von 5</span></p>
+          <p class="trust__label">bei ProvenExpert, aus 1.308 Bewertungen</p>
+        </div>
+        <div class="trust__item">
+          <p class="trust__value">96 %</p>
+          <p class="trust__label">unserer Mandanten empfehlen uns weiter</p>
+        </div>
+        <div class="trust__item">
+          <p class="trust__value">4,7 <span>von 5</span></p>
+          <p class="trust__label">bei Google, verifiziert durch Trustindex</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACHBEREICHE -->
+    <section id="fachbereiche" class="section">
+      <div class="wrap">
+        <header class="section__head">
+          <h2>Unsere Schwerpunkte</h2>
+          <p>Wählen Sie das Rechtsgebiet, das Ihr Anliegen betrifft. Wenn Sie unsicher sind, rufen Sie uns einfach an – wir sagen Ihnen, wer Ihnen am besten weiterhilft.</p>
+        </header>
+
+        <ul class="areas">
+          <li class="area area--wide">
+            <h3>Arbeitsrecht</h3>
+            <p>Wir beraten und vertreten Arbeitgeber und Arbeitnehmer – bei Kündigung, Abfindung und Arbeitsverträgen.</p>
+            <div class="area__split">
+              <a href="https://kanzlei-wulf.de/fachanwalt-arbeitsrecht/arbeitnehmer/">Für Arbeitnehmer</a>
+              <a href="https://kanzlei-wulf.de/fachanwalt-arbeitsrecht/arbeitgeber/">Für Arbeitgeber</a>
+            </div>
+          </li>
+          <li class="area">
+            <h3><a href="https://kanzlei-wulf.de/fachanwalt-familienrecht/">Familienrecht</a></h3>
+            <p>Lösungsorientierte Begleitung bei Trennung und Scheidung, Unterhalt und Sorgerecht.</p>
+          </li>
+          <li class="area">
+            <h3><a href="https://kanzlei-wulf.de/erbrecht/">Erbrecht</a></h3>
+            <p>Testament gestalten, Erbschein beantragen, Pflichtteil durchsetzen.</p>
+          </li>
+          <li class="area">
+            <h3><a href="https://kanzlei-wulf.de/immobilienrecht/">Immobilienrecht</a></h3>
+            <p>Kauf und Verkauf von Haus, Grundstück und Wohnung, Streit mit Mieter oder Vermieter.</p>
+          </li>
+          <li class="area">
+            <h3><a href="https://kanzlei-wulf.de/strafrecht/">Strafrecht</a></h3>
+            <p>Verteidigung vom Ermittlungsverfahren bis zur Verhandlung vor Gericht.</p>
+          </li>
+          <li class="area">
+            <h3><a href="https://kanzlei-wulf.de/mediation/">Mediation</a></h3>
+            <p>Konflikte außergerichtlich und einvernehmlich lösen – mit neutraler Vermittlung.</p>
+          </li>
+          <li class="area">
+            <h3><a href="https://kanzlei-wulf.de/fachbereich/">Bußgeldrecht</a></h3>
+            <p>Bußgeldbescheid prüfen lassen und Einspruch einlegen, besonders wenn ein Fahrverbot droht.</p>
+          </li>
+        </ul>
+        <p class="areas__more">Außerdem beraten wir im Vertrags-, IT- und Sportrecht. <a href="https://kanzlei-wulf.de/fachbereich/">Alle Rechtsgebiete ansehen</a></p>
+      </div>
+    </section>
+
+    <!-- VORGEHEN (echte Reihenfolge, daher nummeriert) -->
+    <section class="section section--tint">
+      <div class="wrap">
+        <header class="section__head">
+          <h2>So gehen wir Ihr Anliegen an</h2>
+          <p>Sie wissen bei jedem Schritt, woran Sie sind – auch, was es kostet.</p>
+        </header>
+        <ol class="steps">
+          <li>
+            <h3>Ihr Anliegen verstehen</h3>
+            <p>Wir hören zu, klären den Sachverhalt und fragen, was Sie erreichen möchten.</p>
+          </li>
+          <li>
+            <h3>Möglichkeiten erläutern</h3>
+            <p>Wir zeigen Ihnen Ihre Handlungsmöglichkeiten – mit Chancen, Risiken und Kosten, in verständlichen Worten.</p>
+          </li>
+          <li>
+            <h3>Das Vorgehen abstimmen</h3>
+            <p>Sie entscheiden. Wir setzen das gemeinsam beschlossene Vorgehen konsequent um.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ANWÄLTE -->
+    <section id="anwaelte" class="section">
+      <div class="wrap">
+        <header class="section__head">
+          <h2>Die Menschen hinter unserer Beratung</h2>
+          <p>Sechs Rechtsanwälte, davon fünf Fachanwaltstitel. Sie sprechen immer mit dem Anwalt, der Ihren Fall bearbeitet.</p>
+        </header>
+        <ul class="team">
+          <li class="person">
+            <div class="person__photo" data-initials="SW"><img loading="lazy" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-12_3840x2160-scaled.jpg" alt="Porträt von Rechtsanwalt Sandro Wulf"></div>
+            <h3><a href="https://kanzlei-wulf.de/ra-sandro-wulf/">Sandro Wulf</a></h3>
+            <p>Fachanwalt für Arbeitsrecht, Mediator</p>
+          </li>
+          <li class="person">
+            <div class="person__photo" data-initials="HL"><img loading="lazy" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-16-scaled.jpg" alt="Porträt von Rechtsanwalt Hendrik Lippmann"></div>
+            <h3><a href="https://kanzlei-wulf.de/ra-hendrik-lippmann/">Hendrik Lippmann</a></h3>
+            <p>Fachanwalt für Familienrecht</p>
+          </li>
+          <li class="person">
+            <div class="person__photo" data-initials="JS"><img loading="lazy" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-7-scaled.jpg" alt="Porträt von Rechtsanwalt Jan Steinmetz"></div>
+            <h3><a href="https://kanzlei-wulf.de/ra-jan-steinmetz/">Jan Steinmetz</a></h3>
+            <p>Fachanwalt für Arbeitsrecht und für Miet- und Wohnungseigentumsrecht</p>
+          </li>
+          <li class="person">
+            <div class="person__photo" data-initials="LH"><img loading="lazy" src="https://kanzlei-wulf.de/wp-content/uploads/2023/02/Wulf-und-Collegen_Mitarbeiterportraits-15_3840x2160-scaled.jpg" alt="Porträt von Rechtsanwalt Lars Hänig"></div>
+            <h3><a href="https://kanzlei-wulf.de/rechtsanwalt-lars-haening/">Lars Hänig</a></h3>
+            <p>Arbeitsrecht, IT-Recht und Online-Handel</p>
+          </li>
+          <li class="person">
+            <div class="person__photo" data-initials="MS"><img loading="lazy" src="https://kanzlei-wulf.de/wp-content/uploads/2023/04/Wulf-und-Collegen_Mitarbeiterportraits-9-scaled.jpg" alt="Porträt von Rechtsanwalt Maximilian Scholze"></div>
+            <h3><a href="https://kanzlei-wulf.de/rechtsanwalt-maximilian-scholze/">Maximilian Scholze</a></h3>
+            <p>Fachanwalt für Strafrecht</p>
+          </li>
+          <li class="person">
+            <div class="person__photo" data-initials="SW"><img loading="lazy" src="https://kanzlei-wulf.de/wp-content/uploads/2025/03/Herr_Weise_Hintergrund-scaled.jpg" alt="Porträt von Rechtsanwalt Sebastian Weise"></div>
+            <h3><a href="https://kanzlei-wulf.de/rechtsanwalt-sebastian-weise/">Sebastian Weise</a></h3>
+            <p>Familienrecht</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- STANDORTE -->
+    <section id="standorte" class="section section--dark">
+      <div class="wrap">
+        <header class="section__head">
+          <h2>Unsere Kanzleien in Magdeburg und Stendal</h2>
+          <p>Persönliche Gespräche nach Terminvereinbarung. Telefonisch erreichen Sie uns montags bis freitags von 8 bis 20 Uhr.</p>
+        </header>
+        <div class="offices">
+          <article class="office">
+            <h3>Magdeburg</h3>
+            <address>Breiter Weg 31<br>39104 Magdeburg</address>
+            <a class="office__phone" href="tel:+4939173746100">0391 737 461 00</a>
+            <a class="office__route" href="https://www.google.com/maps/search/?api=1&amp;query=Breiter+Weg+31+39104+Magdeburg">Route planen</a>
+          </article>
+          <article class="office">
+            <h3>Stendal</h3>
+            <address>Breite Straße 54<br>39576 Stendal</address>
+            <a class="office__phone" href="tel:+4939312527222">03931 252 72 22</a>
+            <a class="office__route" href="https://www.google.com/maps/search/?api=1&amp;query=Breite+Stra%C3%9Fe+54+39576+Stendal">Route planen</a>
+          </article>
+          <article class="office office--remote">
+            <h3>Am Telefon oder per Video</h3>
+            <p>Sie müssen nicht in die Kanzlei kommen. Viele Fragen lassen sich bequem von zu Hause klären. Arbeitgeber betreuen wir bundesweit.</p>
+            <a class="office__mail" href="mailto:info@kanzlei-wulf.de">info@kanzlei-wulf.de</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="section">
+      <div class="wrap contact">
+        <div class="contact__intro">
+          <h2>Schildern Sie uns Ihr Anliegen</h2>
+          <p>Schreiben Sie uns in eigenen Worten, worum es geht. Die Anfrage ist unverbindlich und kostenfrei.</p>
+          <div class="callout">
+            <h3>Läuft eine Frist?</h3>
+            <p>Etwa nach einer Kündigung bleiben oft nur drei Wochen. Rufen Sie uns dann bitte zusätzlich an:</p>
+            <p class="callout__phones"><a href="tel:+4939173746100">0391 737 461 00</a><a href="tel:+4939312527222">03931 252 72 22</a></p>
+          </div>
+          <h3 class="contact__next">Was passiert nach Ihrer Anfrage?</h3>
+          <p>Ein Anwalt aus dem passenden Rechtsgebiet meldet sich bei Ihnen, klärt erste Fragen und schlägt einen Termin vor.</p>
+        </div>
+
+        <form class="form" id="form" novalidate>
+          <div class="field">
+            <label for="f-name">Ihr Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+            <p class="field__error" id="e-name">Bitte geben Sie Ihren Namen ein.</p>
+          </div>
+          <div class="field">
+            <label for="f-mail">Ihre E-Mail-Adresse</label>
+            <input id="f-mail" name="email" type="email" autocomplete="email" required>
+            <p class="field__error" id="e-mail">Bitte geben Sie eine E-Mail-Adresse ein, z. B. name@beispiel.de.</p>
+          </div>
+          <div class="field">
+            <label for="f-tel">Telefonnummer <span class="optional">(freiwillig)</span></label>
+            <input id="f-tel" name="phone" type="tel" autocomplete="tel">
+            <p class="field__hint">Wenn Sie lieber einen Rückruf möchten.</p>
+          </div>
+          <div class="field">
+            <label for="f-msg">Ihr Anliegen</label>
+            <textarea id="f-msg" name="message" rows="6" required></textarea>
+            <p class="field__error" id="e-msg">Bitte beschreiben Sie kurz Ihr Anliegen.</p>
+          </div>
+          <div class="field field--check">
+            <input id="f-ok" name="consent" type="checkbox" required>
+            <label for="f-ok">Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Mehr dazu in der <a href="https://kanzlei-wulf.de/datenschutz/">Datenschutzerklärung</a>.</label>
+            <p class="field__error" id="e-ok">Bitte bestätigen Sie Ihr Einverständnis.</p>
+          </div>
+          <button class="btn btn--block" type="submit">Anfrage senden</button>
+          <div class="form__done" role="status" aria-live="polite" hidden>
+            <h3>Anfrage gesendet</h3>
+            <p>Vielen Dank. Wir melden uns in der Regel am selben Werktag bei Ihnen.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <p class="footer__brand">Rechtsanwälte Wulf &amp; Collegen</p>
+        <p>Mitglied im internationalen Kanzleinetzwerk Avolink.</p>
+      </div>
+      <div>
+        <h2>Kanzlei Magdeburg</h2>
+        <p>Breiter Weg 31, 39104 Magdeburg<br><a href="tel:+4939173746100">0391 737 461 00</a></p>
+      </div>
+      <div>
+        <h2>Kanzlei Stendal</h2>
+        <p>Breite Straße 54, 39576 Stendal<br><a href="tel:+4939312527222">03931 252 72 22</a></p>
+      </div>
+      <div>
+        <h2>Service</h2>
+        <ul>
+          <li><a href="https://kanzlei-wulf.de/news/">Ratgeber und News</a></li>
+          <li><a href="https://kanzlei-wulf.de/podcast/">Podcast</a></li>
+          <li><a href="https://kanzlei-wulf.de/webakte/">WebAkte</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer__legal">
+      <p>© <span id="year">2026</span> Rechtsanwälte Wulf &amp; Collegen</p>
+      <ul>
+        <li><a href="https://kanzlei-wulf.de/impressum/">Impressum</a></li>
+        <li><a href="https://kanzlei-wulf.de/datenschutz/">Datenschutz</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
