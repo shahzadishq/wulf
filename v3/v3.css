@@ -390,7 +390,7 @@ a { color: inherit; }
 .foot a { color: #fff; text-decoration: none; }
 
 .foot__badges { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; padding-bottom: 2.5rem; }
-.tibadge { display: flex; align-items: center; gap: .9rem; padding: 1rem 1.3rem; background: #fff; border-radius: 6px; color: #1a1a1a; text-decoration: none; box-shadow: 0 10px 30px -15px rgba(0,0,0,.6); transition: transform .5s var(--out); }
+.foot .tibadge { display: flex; align-items: center; gap: .9rem; padding: 1rem 1.3rem; background: #fff; border-radius: 6px; color: #1a1a1a; text-decoration: none; box-shadow: 0 10px 30px -15px rgba(0,0,0,.6); transition: transform .5s var(--out); }
 .tibadge:hover, .pebadge:hover { transform: translateY(-3px); }
 .tibadge__logo { width: 2.4rem; height: 2.4rem; }
 .tibadge__body { display: grid; gap: .1rem; line-height: 1.25; }
@@ -400,6 +400,7 @@ a { color: inherit; }
 .tibadge__stars img { width: 1.05rem; height: 1.05rem; }
 .tibadge__title { font-weight: 700; font-size: .95rem; }
 .tibadge small { font-size: .78rem; color: #666; }
+.foot .tibadge:hover { text-decoration: none; }
 .pebadge { display: block; line-height: 0; border-radius: 4px; overflow: hidden; transition: transform .5s var(--out); }
 .pebadge img { width: 150px; height: 150px; }
 .foot__legal { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-block: 1.4rem; border-top: 1px solid rgba(255,255,255,.08); }
