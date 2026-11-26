@@ -401,6 +401,8 @@ a { color: inherit; }
 .tibadge__title { font-weight: 700; font-size: .95rem; }
 .tibadge small { font-size: .78rem; color: #666; }
 .foot .tibadge:hover { text-decoration: none; }
+.petop { line-height: 0; transition: transform .5s var(--out); }
+.petop:hover { transform: translateY(-3px); }
 .pebadge { display: block; line-height: 0; border-radius: 4px; overflow: hidden; transition: transform .5s var(--out); }
 .pebadge img { width: 150px; height: 150px; }
 .foot__legal { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-block: 1.4rem; border-top: 1px solid rgba(255,255,255,.08); }
