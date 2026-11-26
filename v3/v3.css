@@ -389,17 +389,19 @@ a { color: inherit; }
 .foot p svg { width: 1.05rem; height: 1.05rem; margin-top: .3rem; color: #8FA6B2; }
 .foot a { color: #fff; text-decoration: none; }
 
-.foot__badges { display: flex; flex-wrap: wrap; gap: 1rem; padding-bottom: 2.5rem; }
-.fbadge { display: grid; gap: .35rem; min-width: 15rem; padding: 1rem 1.25rem 1rem 1.1rem; border: 1px solid rgba(255,255,255,.12); border-left: 3px solid var(--red); border-radius: 6px; background: rgba(255,255,255,.04); color: #fff; text-decoration: none; transition: background .4s, transform .5s var(--out); }
-.fbadge:hover { background: rgba(255,255,255,.08); transform: translateY(-3px); }
-.fbadge__name { font-weight: 700; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; color: #A9BDC7; }
-.fbadge__row { display: flex; align-items: center; gap: .7rem; }
-.fbadge strong { font-family: var(--serif); font-size: 1.7rem; line-height: 1; }
-.fbadge strong em { font-style: normal; font-size: .5em; color: #A9BDC7; margin-left: .15rem; }
-.fbadge__stars { display: flex; gap: 2px; color: #fff; }
-.fbadge__stars svg { width: 1rem; height: 1rem; }
-.fbadge small { font-size: .85rem; color: #8FA6B2; }
-@media (max-width: 560px) { .fbadge { flex: 1 1 100%; } }
+.foot__badges { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; padding-bottom: 2.5rem; }
+.tibadge { display: flex; align-items: center; gap: .9rem; padding: 1rem 1.3rem; background: #fff; border-radius: 6px; color: #1a1a1a; text-decoration: none; box-shadow: 0 10px 30px -15px rgba(0,0,0,.6); transition: transform .5s var(--out); }
+.tibadge:hover, .pebadge:hover { transform: translateY(-3px); }
+.tibadge__logo { width: 2.4rem; height: 2.4rem; }
+.tibadge__body { display: grid; gap: .1rem; line-height: 1.25; }
+.tibadge__top { display: flex; align-items: center; gap: .5rem; }
+.tibadge__top strong { font-size: 1.25rem; }
+.tibadge__stars { display: flex; gap: 1px; }
+.tibadge__stars img { width: 1.05rem; height: 1.05rem; }
+.tibadge__title { font-weight: 700; font-size: .95rem; }
+.tibadge small { font-size: .78rem; color: #666; }
+.pebadge { display: block; line-height: 0; border-radius: 4px; overflow: hidden; transition: transform .5s var(--out); }
+.pebadge img { width: 150px; height: 150px; }
 .foot__legal { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-block: 1.4rem; border-top: 1px solid rgba(255,255,255,.08); }
 .foot__legal p { margin: 0; gap: 1.5rem; }
 
