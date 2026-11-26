@@ -389,6 +389,17 @@ a { color: inherit; }
 .foot p svg { width: 1.05rem; height: 1.05rem; margin-top: .3rem; color: #8FA6B2; }
 .foot a { color: #fff; text-decoration: none; }
 
+.foot__badges { display: flex; flex-wrap: wrap; gap: 1rem; padding-bottom: 2.5rem; }
+.fbadge { display: grid; gap: .35rem; min-width: 15rem; padding: 1rem 1.25rem 1rem 1.1rem; border: 1px solid rgba(255,255,255,.12); border-left: 3px solid var(--red); border-radius: 6px; background: rgba(255,255,255,.04); color: #fff; text-decoration: none; transition: background .4s, transform .5s var(--out); }
+.fbadge:hover { background: rgba(255,255,255,.08); transform: translateY(-3px); }
+.fbadge__name { font-weight: 700; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; color: #A9BDC7; }
+.fbadge__row { display: flex; align-items: center; gap: .7rem; }
+.fbadge strong { font-family: var(--serif); font-size: 1.7rem; line-height: 1; }
+.fbadge strong em { font-style: normal; font-size: .5em; color: #A9BDC7; margin-left: .15rem; }
+.fbadge__stars { display: flex; gap: 2px; color: #fff; }
+.fbadge__stars svg { width: 1rem; height: 1rem; }
+.fbadge small { font-size: .85rem; color: #8FA6B2; }
+@media (max-width: 560px) { .fbadge { flex: 1 1 100%; } }
 .foot__legal { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-block: 1.4rem; border-top: 1px solid rgba(255,255,255,.08); }
 .foot__legal p { margin: 0; gap: 1.5rem; }
 
